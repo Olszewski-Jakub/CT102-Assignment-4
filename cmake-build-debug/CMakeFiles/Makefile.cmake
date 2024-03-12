@@ -89,7 +89,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Users/jolsz/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake"
   "C:/Users/jolsz/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake"
   "C:/Users/jolsz/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/ProcessorCount.cmake"
-  "C:/Users/jolsz/uni/freshman/CT102 - Algorithms & Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/CMakeLists.txt"
+  "C:/Users/jolsz/uni/freshman/CT102 - Algorithms & Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/CMakeLists.txt"
   "CMakeFiles/3.27.8/CMakeCCompiler.cmake"
   "CMakeFiles/3.27.8/CMakeRCCompiler.cmake"
   "CMakeFiles/3.27.8/CMakeSystem.cmake"

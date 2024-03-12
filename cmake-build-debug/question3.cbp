@@ -8,18 +8,18 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug"/>
+				<Option working_dir="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="question3">
-				<Option output="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/question3.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug"/>
+				<Option output="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/question3.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -31,15 +31,15 @@
 					<Add directory="/mingw/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 question3"/>
-					<CompileFile command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 question3"/>
+					<CompileFile command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="question3/fast">
-				<Option output="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/question3.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug"/>
+				<Option output="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/question3.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -51,52 +51,52 @@
 					<Add directory="/mingw/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 question3/fast"/>
-					<CompileFile command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 question3/fast"/>
+					<CompileFile command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug"/>
+				<Option working_dir="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug"/>
+				<Option working_dir="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/main.c">
+		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/main.c">
 			<Option target="question3"/>
 		</Unit>
-		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/src/FileOperations.c">
+		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/src/FileOperations.c">
 			<Option target="question3"/>
 		</Unit>
-		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/src/ResultManagement.c">
+		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/src/ResultManagement.c">
 			<Option target="question3"/>
 		</Unit>
-		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/src/SortingAlgorithms.c">
+		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/src/SortingAlgorithms.c">
 			<Option target="question3"/>
 		</Unit>
-		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/src/SortingOperations.c">
+		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/src/SortingOperations.c">
 			<Option target="question3"/>
 		</Unit>
-		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/src/Swap.c">
+		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/src/Swap.c">
 			<Option target="question3"/>
 		</Unit>
-		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/CMakeLists.txt">
+		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

@@ -1,5 +1,5 @@
 CMakeFiles/question3.dir/src/SortingOperations.c.obj: \
- C:\Users\jolsz\uni\freshman\CT102\ -\ Algorithms\ &\ Information\ Systems\assignmnets\Assignment\ 4\Sorting_Algorithms_Performance_Analysis\src\SortingOperations.c \
+ C:\Users\jolsz\uni\freshman\CT102\ -\ Algorithms\ &\ Information\ Systems\assignmnets\Assignment_4\Sorting_Algorithms_Performance_Analysis\src\SortingOperations.c \
  C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/time.h \
  C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/crtdefs.h \
  C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/corecrt.h \
@@ -12,9 +12,9 @@ CMakeFiles/question3.dir/src/SortingOperations.c.obj: \
  C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
  C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/_timeval.h \
  C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/pthread_time.h \
- C:/Users/jolsz/uni/freshman/CT102\ -\ Algorithms\ &\ Information\ Systems/assignmnets/Assignment\ 4/Sorting_Algorithms_Performance_Analysis/include/SortingOperations.h \
- C:/Users/jolsz/uni/freshman/CT102\ -\ Algorithms\ &\ Information\ Systems/assignmnets/Assignment\ 4/Sorting_Algorithms_Performance_Analysis/include/FileOperations.h \
- C:/Users/jolsz/uni/freshman/CT102\ -\ Algorithms\ &\ Information\ Systems/assignmnets/Assignment\ 4/Sorting_Algorithms_Performance_Analysis/include/SortingResult.h \
+ C:/Users/jolsz/uni/freshman/CT102\ -\ Algorithms\ &\ Information\ Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/include/SortingOperations.h \
+ C:/Users/jolsz/uni/freshman/CT102\ -\ Algorithms\ &\ Information\ Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/include/FileOperations.h \
+ C:/Users/jolsz/uni/freshman/CT102\ -\ Algorithms\ &\ Information\ Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/include/SortingResult.h \
  C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/stdio.h \
  C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
  C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -29,6 +29,6 @@ CMakeFiles/question3.dir/src/SortingOperations.c.obj: \
  C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/malloc.h \
  C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h \
  C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/errno.h \
- C:/Users/jolsz/uni/freshman/CT102\ -\ Algorithms\ &\ Information\ Systems/assignmnets/Assignment\ 4/Sorting_Algorithms_Performance_Analysis/include/ResultManagement.h \
+ C:/Users/jolsz/uni/freshman/CT102\ -\ Algorithms\ &\ Information\ Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/include/ResultManagement.h \
  C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/string.h \
  C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h

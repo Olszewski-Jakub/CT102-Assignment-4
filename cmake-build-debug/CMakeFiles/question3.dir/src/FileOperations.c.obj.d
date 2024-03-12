@@ -1,7 +1,7 @@
 CMakeFiles/question3.dir/src/FileOperations.c.obj: \
- C:\Users\jolsz\uni\freshman\CT102\ -\ Algorithms\ &\ Information\ Systems\assignmnets\Assignment\ 4\Sorting_Algorithms_Performance_Analysis\src\FileOperations.c \
- C:/Users/jolsz/uni/freshman/CT102\ -\ Algorithms\ &\ Information\ Systems/assignmnets/Assignment\ 4/Sorting_Algorithms_Performance_Analysis/include/FileOperations.h \
- C:/Users/jolsz/uni/freshman/CT102\ -\ Algorithms\ &\ Information\ Systems/assignmnets/Assignment\ 4/Sorting_Algorithms_Performance_Analysis/include/SortingResult.h \
+ C:\Users\jolsz\uni\freshman\CT102\ -\ Algorithms\ &\ Information\ Systems\assignmnets\Assignment_4\Sorting_Algorithms_Performance_Analysis\src\FileOperations.c \
+ C:/Users/jolsz/uni/freshman/CT102\ -\ Algorithms\ &\ Information\ Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/include/FileOperations.h \
+ C:/Users/jolsz/uni/freshman/CT102\ -\ Algorithms\ &\ Information\ Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/include/SortingResult.h \
  C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/stdio.h \
  C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
  C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/corecrt.h \

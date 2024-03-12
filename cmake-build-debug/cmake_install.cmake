@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/jolsz/uni/freshman/CT102 - Algorithms & Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis
+# Install script for directory: C:/Users/jolsz/uni/freshman/CT102 - Algorithms & Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/jolsz/uni/freshman/CT102 - Algorithms & Information Systems/assignmnets/Assignment 4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/jolsz/uni/freshman/CT102 - Algorithms & Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
