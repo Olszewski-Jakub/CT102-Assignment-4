@@ -137,11 +137,12 @@ void mergeSortRecursive(int arrA[], int lb, int ub, int *swaps, int *comparisons
         mid = (lb + ub) / 2;
         mergeSortRecursive(arrA, lb, mid, swaps, comparisons, functionCalls);
         mergeSortRecursive(arrA, mid + 1, ub, swaps, comparisons, functionCalls);
-        merge(arrA, lb, mid, ub, swaps, comparisons);
+        merge(arrA, lb, mid, ub, swaps, comparisons, functionCalls);
     }
 }
 
-void merge(int arrA[], int lb, int mid, int ub, int *swaps, int *comparisons) {
+void merge(int arrA[], int lb, int mid, int ub, int *swaps, int *comparisons, int *functionCalls) {
+    (*functionCalls)++; // Increment the function call count
     int i, j, k;
     int size = ub - lb + 1;
     int *arrC = (int *) calloc(size, sizeof(int));

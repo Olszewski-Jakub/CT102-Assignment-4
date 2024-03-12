@@ -53,6 +53,6 @@ void countingSort(int nums[], int size, int *swaps, int *comparisons, int *funct
 
 void mergeSort(int nums[], int size, int *swaps, int *comparisons, int *functionCalls);
 void mergeSortRecursive(int nums[], int lb, int ub, int *swaps, int *comparisons, int *functionCalls);
-void merge(int arrA[], int lb, int mid, int ub, int *swaps, int *comparisons);
+void merge(int arrA[], int lb, int mid, int ub, int *swaps, int *comparisons, int *functionCalls);
 
 #endif //QUESTION3_SORTINGALGORITHMS_H

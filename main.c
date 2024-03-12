@@ -28,7 +28,7 @@ void processFile(const char *filePath, const char *resultFilePath);
 int main() {
 
     processFile(file1, result_file_1);
-//    processFile(file2, result_file_2);
+    processFile(file2, result_file_2);
 //    processFile(file_a4, result_file_a4);
     return 0;
 }
