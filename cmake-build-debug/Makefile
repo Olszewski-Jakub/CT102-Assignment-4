@@ -152,6 +152,78 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\question3.dir\build.make CMakeFiles/question3.dir/main.c.s
 .PHONY : main.c.s
 
+plot/pbPlots.obj: plot/pbPlots.c.obj
+.PHONY : plot/pbPlots.obj
+
+# target to build an object file
+plot/pbPlots.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\question3.dir\build.make CMakeFiles/question3.dir/plot/pbPlots.c.obj
+.PHONY : plot/pbPlots.c.obj
+
+plot/pbPlots.i: plot/pbPlots.c.i
+.PHONY : plot/pbPlots.i
+
+# target to preprocess a source file
+plot/pbPlots.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\question3.dir\build.make CMakeFiles/question3.dir/plot/pbPlots.c.i
+.PHONY : plot/pbPlots.c.i
+
+plot/pbPlots.s: plot/pbPlots.c.s
+.PHONY : plot/pbPlots.s
+
+# target to generate assembly for a file
+plot/pbPlots.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\question3.dir\build.make CMakeFiles/question3.dir/plot/pbPlots.c.s
+.PHONY : plot/pbPlots.c.s
+
+plot/supportLib.obj: plot/supportLib.c.obj
+.PHONY : plot/supportLib.obj
+
+# target to build an object file
+plot/supportLib.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\question3.dir\build.make CMakeFiles/question3.dir/plot/supportLib.c.obj
+.PHONY : plot/supportLib.c.obj
+
+plot/supportLib.i: plot/supportLib.c.i
+.PHONY : plot/supportLib.i
+
+# target to preprocess a source file
+plot/supportLib.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\question3.dir\build.make CMakeFiles/question3.dir/plot/supportLib.c.i
+.PHONY : plot/supportLib.c.i
+
+plot/supportLib.s: plot/supportLib.c.s
+.PHONY : plot/supportLib.s
+
+# target to generate assembly for a file
+plot/supportLib.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\question3.dir\build.make CMakeFiles/question3.dir/plot/supportLib.c.s
+.PHONY : plot/supportLib.c.s
+
+src/CharOperations.obj: src/CharOperations.c.obj
+.PHONY : src/CharOperations.obj
+
+# target to build an object file
+src/CharOperations.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\question3.dir\build.make CMakeFiles/question3.dir/src/CharOperations.c.obj
+.PHONY : src/CharOperations.c.obj
+
+src/CharOperations.i: src/CharOperations.c.i
+.PHONY : src/CharOperations.i
+
+# target to preprocess a source file
+src/CharOperations.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\question3.dir\build.make CMakeFiles/question3.dir/src/CharOperations.c.i
+.PHONY : src/CharOperations.c.i
+
+src/CharOperations.s: src/CharOperations.c.s
+.PHONY : src/CharOperations.s
+
+# target to generate assembly for a file
+src/CharOperations.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\question3.dir\build.make CMakeFiles/question3.dir/src/CharOperations.c.s
+.PHONY : src/CharOperations.c.s
+
 src/FileOperations.obj: src/FileOperations.c.obj
 .PHONY : src/FileOperations.obj
 
@@ -175,6 +247,30 @@ src/FileOperations.s: src/FileOperations.c.s
 src/FileOperations.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\question3.dir\build.make CMakeFiles/question3.dir/src/FileOperations.c.s
 .PHONY : src/FileOperations.c.s
+
+src/PlotData.obj: src/PlotData.c.obj
+.PHONY : src/PlotData.obj
+
+# target to build an object file
+src/PlotData.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\question3.dir\build.make CMakeFiles/question3.dir/src/PlotData.c.obj
+.PHONY : src/PlotData.c.obj
+
+src/PlotData.i: src/PlotData.c.i
+.PHONY : src/PlotData.i
+
+# target to preprocess a source file
+src/PlotData.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\question3.dir\build.make CMakeFiles/question3.dir/src/PlotData.c.i
+.PHONY : src/PlotData.c.i
+
+src/PlotData.s: src/PlotData.c.s
+.PHONY : src/PlotData.s
+
+# target to generate assembly for a file
+src/PlotData.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\question3.dir\build.make CMakeFiles/question3.dir/src/PlotData.c.s
+.PHONY : src/PlotData.c.s
 
 src/ResultManagement.obj: src/ResultManagement.c.obj
 .PHONY : src/ResultManagement.obj
@@ -284,9 +380,21 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... plot/pbPlots.obj
+	@echo ... plot/pbPlots.i
+	@echo ... plot/pbPlots.s
+	@echo ... plot/supportLib.obj
+	@echo ... plot/supportLib.i
+	@echo ... plot/supportLib.s
+	@echo ... src/CharOperations.obj
+	@echo ... src/CharOperations.i
+	@echo ... src/CharOperations.s
 	@echo ... src/FileOperations.obj
 	@echo ... src/FileOperations.i
 	@echo ... src/FileOperations.s
+	@echo ... src/PlotData.obj
+	@echo ... src/PlotData.i
+	@echo ... src/PlotData.s
 	@echo ... src/ResultManagement.obj
 	@echo ... src/ResultManagement.i
 	@echo ... src/ResultManagement.s

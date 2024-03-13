@@ -8,4 +8,10 @@ add_executable(question3 main.c
         src/FileOperations.c
         src/SortingOperations.c
         src/ResultManagement.c
-        src/Swap.c)
+        src/Swap.c
+        src/PlotData.c
+        include/PlotData.h
+        plot/pbPlots.c
+        plot/supportLib.c
+        src/CharOperations.c
+        include/CharOperations.h)

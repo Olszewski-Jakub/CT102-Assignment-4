@@ -78,10 +78,34 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/include/CharOperations.h">
+			<Option target="question3"/>
+		</Unit>
+		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/include/PlotData.h">
+			<Option target="question3"/>
+		</Unit>
 		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/main.c">
 			<Option target="question3"/>
 		</Unit>
+		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/plot/pbPlots.c">
+			<Option target="question3"/>
+		</Unit>
+		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/plot/pbPlots.h">
+			<Option target="question3"/>
+		</Unit>
+		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/plot/supportLib.c">
+			<Option target="question3"/>
+		</Unit>
+		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/plot/supportLib.h">
+			<Option target="question3"/>
+		</Unit>
+		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/src/CharOperations.c">
+			<Option target="question3"/>
+		</Unit>
 		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/src/FileOperations.c">
+			<Option target="question3"/>
+		</Unit>
+		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/src/PlotData.c">
 			<Option target="question3"/>
 		</Unit>
 		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/src/ResultManagement.c">

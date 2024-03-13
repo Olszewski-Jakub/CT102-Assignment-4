@@ -152,6 +152,62 @@ CMakeFiles/question3.dir/src/Swap.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/question3.dir/src/Swap.c.s"
 	C:\Users\jolsz\AppData\Local\Programs\CLion\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\jolsz\uni\freshman\CT102 - Algorithms & Information Systems\assignmnets\Assignment_4\Sorting_Algorithms_Performance_Analysis\src\Swap.c" -o CMakeFiles\question3.dir\src\Swap.c.s
 
+CMakeFiles/question3.dir/src/PlotData.c.obj: CMakeFiles/question3.dir/flags.make
+CMakeFiles/question3.dir/src/PlotData.c.obj: C:/Users/jolsz/uni/freshman/CT102\ -\ Algorithms\ &\ Information\ Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/src/PlotData.c
+CMakeFiles/question3.dir/src/PlotData.c.obj: CMakeFiles/question3.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\jolsz\uni\freshman\CT102 - Algorithms & Information Systems\assignmnets\Assignment_4\Sorting_Algorithms_Performance_Analysis\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/question3.dir/src/PlotData.c.obj"
+	C:\Users\jolsz\AppData\Local\Programs\CLion\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/question3.dir/src/PlotData.c.obj -MF CMakeFiles\question3.dir\src\PlotData.c.obj.d -o CMakeFiles\question3.dir\src\PlotData.c.obj -c "C:\Users\jolsz\uni\freshman\CT102 - Algorithms & Information Systems\assignmnets\Assignment_4\Sorting_Algorithms_Performance_Analysis\src\PlotData.c"
+
+CMakeFiles/question3.dir/src/PlotData.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/question3.dir/src/PlotData.c.i"
+	C:\Users\jolsz\AppData\Local\Programs\CLion\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\jolsz\uni\freshman\CT102 - Algorithms & Information Systems\assignmnets\Assignment_4\Sorting_Algorithms_Performance_Analysis\src\PlotData.c" > CMakeFiles\question3.dir\src\PlotData.c.i
+
+CMakeFiles/question3.dir/src/PlotData.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/question3.dir/src/PlotData.c.s"
+	C:\Users\jolsz\AppData\Local\Programs\CLion\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\jolsz\uni\freshman\CT102 - Algorithms & Information Systems\assignmnets\Assignment_4\Sorting_Algorithms_Performance_Analysis\src\PlotData.c" -o CMakeFiles\question3.dir\src\PlotData.c.s
+
+CMakeFiles/question3.dir/plot/pbPlots.c.obj: CMakeFiles/question3.dir/flags.make
+CMakeFiles/question3.dir/plot/pbPlots.c.obj: C:/Users/jolsz/uni/freshman/CT102\ -\ Algorithms\ &\ Information\ Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/plot/pbPlots.c
+CMakeFiles/question3.dir/plot/pbPlots.c.obj: CMakeFiles/question3.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\jolsz\uni\freshman\CT102 - Algorithms & Information Systems\assignmnets\Assignment_4\Sorting_Algorithms_Performance_Analysis\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/question3.dir/plot/pbPlots.c.obj"
+	C:\Users\jolsz\AppData\Local\Programs\CLion\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/question3.dir/plot/pbPlots.c.obj -MF CMakeFiles\question3.dir\plot\pbPlots.c.obj.d -o CMakeFiles\question3.dir\plot\pbPlots.c.obj -c "C:\Users\jolsz\uni\freshman\CT102 - Algorithms & Information Systems\assignmnets\Assignment_4\Sorting_Algorithms_Performance_Analysis\plot\pbPlots.c"
+
+CMakeFiles/question3.dir/plot/pbPlots.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/question3.dir/plot/pbPlots.c.i"
+	C:\Users\jolsz\AppData\Local\Programs\CLion\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\jolsz\uni\freshman\CT102 - Algorithms & Information Systems\assignmnets\Assignment_4\Sorting_Algorithms_Performance_Analysis\plot\pbPlots.c" > CMakeFiles\question3.dir\plot\pbPlots.c.i
+
+CMakeFiles/question3.dir/plot/pbPlots.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/question3.dir/plot/pbPlots.c.s"
+	C:\Users\jolsz\AppData\Local\Programs\CLion\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\jolsz\uni\freshman\CT102 - Algorithms & Information Systems\assignmnets\Assignment_4\Sorting_Algorithms_Performance_Analysis\plot\pbPlots.c" -o CMakeFiles\question3.dir\plot\pbPlots.c.s
+
+CMakeFiles/question3.dir/plot/supportLib.c.obj: CMakeFiles/question3.dir/flags.make
+CMakeFiles/question3.dir/plot/supportLib.c.obj: C:/Users/jolsz/uni/freshman/CT102\ -\ Algorithms\ &\ Information\ Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/plot/supportLib.c
+CMakeFiles/question3.dir/plot/supportLib.c.obj: CMakeFiles/question3.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\jolsz\uni\freshman\CT102 - Algorithms & Information Systems\assignmnets\Assignment_4\Sorting_Algorithms_Performance_Analysis\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/question3.dir/plot/supportLib.c.obj"
+	C:\Users\jolsz\AppData\Local\Programs\CLion\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/question3.dir/plot/supportLib.c.obj -MF CMakeFiles\question3.dir\plot\supportLib.c.obj.d -o CMakeFiles\question3.dir\plot\supportLib.c.obj -c "C:\Users\jolsz\uni\freshman\CT102 - Algorithms & Information Systems\assignmnets\Assignment_4\Sorting_Algorithms_Performance_Analysis\plot\supportLib.c"
+
+CMakeFiles/question3.dir/plot/supportLib.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/question3.dir/plot/supportLib.c.i"
+	C:\Users\jolsz\AppData\Local\Programs\CLion\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\jolsz\uni\freshman\CT102 - Algorithms & Information Systems\assignmnets\Assignment_4\Sorting_Algorithms_Performance_Analysis\plot\supportLib.c" > CMakeFiles\question3.dir\plot\supportLib.c.i
+
+CMakeFiles/question3.dir/plot/supportLib.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/question3.dir/plot/supportLib.c.s"
+	C:\Users\jolsz\AppData\Local\Programs\CLion\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\jolsz\uni\freshman\CT102 - Algorithms & Information Systems\assignmnets\Assignment_4\Sorting_Algorithms_Performance_Analysis\plot\supportLib.c" -o CMakeFiles\question3.dir\plot\supportLib.c.s
+
+CMakeFiles/question3.dir/src/CharOperations.c.obj: CMakeFiles/question3.dir/flags.make
+CMakeFiles/question3.dir/src/CharOperations.c.obj: C:/Users/jolsz/uni/freshman/CT102\ -\ Algorithms\ &\ Information\ Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/src/CharOperations.c
+CMakeFiles/question3.dir/src/CharOperations.c.obj: CMakeFiles/question3.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\jolsz\uni\freshman\CT102 - Algorithms & Information Systems\assignmnets\Assignment_4\Sorting_Algorithms_Performance_Analysis\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/question3.dir/src/CharOperations.c.obj"
+	C:\Users\jolsz\AppData\Local\Programs\CLion\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/question3.dir/src/CharOperations.c.obj -MF CMakeFiles\question3.dir\src\CharOperations.c.obj.d -o CMakeFiles\question3.dir\src\CharOperations.c.obj -c "C:\Users\jolsz\uni\freshman\CT102 - Algorithms & Information Systems\assignmnets\Assignment_4\Sorting_Algorithms_Performance_Analysis\src\CharOperations.c"
+
+CMakeFiles/question3.dir/src/CharOperations.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/question3.dir/src/CharOperations.c.i"
+	C:\Users\jolsz\AppData\Local\Programs\CLion\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\jolsz\uni\freshman\CT102 - Algorithms & Information Systems\assignmnets\Assignment_4\Sorting_Algorithms_Performance_Analysis\src\CharOperations.c" > CMakeFiles\question3.dir\src\CharOperations.c.i
+
+CMakeFiles/question3.dir/src/CharOperations.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/question3.dir/src/CharOperations.c.s"
+	C:\Users\jolsz\AppData\Local\Programs\CLion\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\jolsz\uni\freshman\CT102 - Algorithms & Information Systems\assignmnets\Assignment_4\Sorting_Algorithms_Performance_Analysis\src\CharOperations.c" -o CMakeFiles\question3.dir\src\CharOperations.c.s
+
 # Object files for target question3
 question3_OBJECTS = \
 "CMakeFiles/question3.dir/main.c.obj" \
@@ -159,7 +215,11 @@ question3_OBJECTS = \
 "CMakeFiles/question3.dir/src/FileOperations.c.obj" \
 "CMakeFiles/question3.dir/src/SortingOperations.c.obj" \
 "CMakeFiles/question3.dir/src/ResultManagement.c.obj" \
-"CMakeFiles/question3.dir/src/Swap.c.obj"
+"CMakeFiles/question3.dir/src/Swap.c.obj" \
+"CMakeFiles/question3.dir/src/PlotData.c.obj" \
+"CMakeFiles/question3.dir/plot/pbPlots.c.obj" \
+"CMakeFiles/question3.dir/plot/supportLib.c.obj" \
+"CMakeFiles/question3.dir/src/CharOperations.c.obj"
 
 # External object files for target question3
 question3_EXTERNAL_OBJECTS =
@@ -170,11 +230,15 @@ question3.exe: CMakeFiles/question3.dir/src/FileOperations.c.obj
 question3.exe: CMakeFiles/question3.dir/src/SortingOperations.c.obj
 question3.exe: CMakeFiles/question3.dir/src/ResultManagement.c.obj
 question3.exe: CMakeFiles/question3.dir/src/Swap.c.obj
+question3.exe: CMakeFiles/question3.dir/src/PlotData.c.obj
+question3.exe: CMakeFiles/question3.dir/plot/pbPlots.c.obj
+question3.exe: CMakeFiles/question3.dir/plot/supportLib.c.obj
+question3.exe: CMakeFiles/question3.dir/src/CharOperations.c.obj
 question3.exe: CMakeFiles/question3.dir/build.make
 question3.exe: CMakeFiles/question3.dir/linkLibs.rsp
 question3.exe: CMakeFiles/question3.dir/objects1.rsp
 question3.exe: CMakeFiles/question3.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\jolsz\uni\freshman\CT102 - Algorithms & Information Systems\assignmnets\Assignment_4\Sorting_Algorithms_Performance_Analysis\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable question3.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\jolsz\uni\freshman\CT102 - Algorithms & Information Systems\assignmnets\Assignment_4\Sorting_Algorithms_Performance_Analysis\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking C executable question3.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\question3.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
