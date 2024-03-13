@@ -85,4 +85,10 @@ void mergeSortRecursive(int nums[], int lb, int ub, int *swaps, int *comparisons
  */
 void merge(int arrA[], int lb, int mid, int ub, int *swaps, int *comparisons, int *functionCalls);
 
+void quickSort(int nums[], int size, int *swaps, int *comparisons, int *functionCalls);
+
+void quickSortRecursive(int arrA[], int startval, int endval, int *swaps, int *comparisons, int *functionCalls);
+
+int partition(int arrA[], int startval, int endval, int *swaps, int *comparisons, int *functionCalls);
+
 #endif //QUESTION3_SORTINGALGORITHMS_H

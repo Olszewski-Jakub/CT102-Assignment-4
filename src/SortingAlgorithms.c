@@ -182,3 +182,55 @@ void merge(int arrA[], int lb, int mid, int ub, int *swaps, int *comparisons, in
     }
     free(arrC);
 }
+
+void quickSort(int nums[], int size, int *swaps, int *comparisons, int *functionCalls) {
+    *swaps = 0;
+    *comparisons = 0;
+    *functionCalls = 0;
+    quickSortRecursive(nums, 0, size - 1, swaps, comparisons, functionCalls);
+}
+
+
+void quickSortRecursive(int arrA[], int startval, int endval, int *swaps, int *comparisons, int *functionCalls) {
+    (*functionCalls)++;
+    if ((endval - startval) >= 1) {
+        int k = partition(arrA, startval, endval, swaps, comparisons, functionCalls);
+        quickSortRecursive(arrA, startval, k - 1, swaps, comparisons, functionCalls);
+        quickSortRecursive(arrA, k + 1, endval, swaps, comparisons, functionCalls);
+    }
+}
+
+int partition(int arrA[], int startval, int endval, int *swaps, int *comparisons, int *functionCalls) {
+    (*functionCalls)++;
+    int mid = startval + (endval - startval) / 2;
+    if (arrA[startval] > arrA[mid]) {
+        swap(&arrA[startval], &arrA[mid]);
+        (*swaps)++;
+    }
+    if (arrA[startval] > arrA[endval]) {
+        swap(&arrA[startval], &arrA[endval]);
+        (*swaps)++;
+    }
+    if (arrA[mid] > arrA[endval]) {
+        swap(&arrA[mid], &arrA[endval]);
+        (*swaps)++;
+    }
+    swap(&arrA[mid], &arrA[startval]);
+    (*comparisons) += 3;
+    int pivot = arrA[startval];
+    int k = startval;
+
+    for (int j = startval + 1; j <= endval; j++) {
+        (*comparisons)++;
+        if (arrA[j] <= pivot) {
+            k++;
+            if (k != j) {
+                swap(&arrA[k], &arrA[j]);
+                (*swaps)++;
+            }
+        }
+    }
+    swap(&arrA[k], &arrA[startval]);
+    (*swaps)++;
+    return k;
+}

@@ -9,7 +9,7 @@
 #define result_file_1 "C://Users//jolsz//uni//freshman//CT102 - Algorithms & Information Systems//assignmnets//Assignment_4//Sorting_Algorithms_Performance_Analysis//files//result_file1.csv"
 #define result_file_2 "C://Users//jolsz//uni//freshman//CT102 - Algorithms & Information Systems//assignmnets//Assignment_4//Sorting_Algorithms_Performance_Analysis//files//result_file2.csv"
 
-#define NUM_SORTING_ALGORITHMS 5
+#define NUM_SORTING_ALGORITHMS 6
 #define NUM_RESULTS_PER_ALGORITHM 10
 
 
@@ -40,7 +40,7 @@ void processFile(const char *filePath, const char *resultFilePath) {
     executeSort(numbers, insertionSort, "Insertion Sort", &arrIndex, sortingResultsFile, filePath);
     executeSort(numbers, countingSort, "Count Sort", &arrIndex, sortingResultsFile, filePath);
     executeSort(numbers, mergeSort, "Merge Sort", &arrIndex, sortingResultsFile, filePath);
-
+    executeSort(numbers, quickSort, "Quick Sort", &arrIndex, sortingResultsFile, filePath);
     printResults(&arrIndex, sortingResultsFile);
 //    writeResultsToFile(sortingResultsFile, NUM_SORTING_ALGORITHMS * 10, resultFilePath);
     if (!writeResultsToFile(sortingResultsFile, NUM_SORTING_ALGORITHMS * NUM_RESULTS_PER_ALGORITHM, resultFilePath)) {
