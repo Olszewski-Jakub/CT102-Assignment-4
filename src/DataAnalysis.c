@@ -64,3 +64,12 @@ double** calculate_points_on_line(int num_points, double x_min, double x_max, do
     // Return the points array
     return points;
 }
+
+double arrayAverage(double *array, int size) {
+    double sum = 0;
+    for (int i = 0; i < size; i++) {
+        sum += array[i];
+    }
+    double average = sum / size;
+    return average;
+}

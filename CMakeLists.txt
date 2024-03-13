@@ -16,4 +16,5 @@ add_executable(question3 main.c
         src/CharOperations.c
         include/CharOperations.h
         src/DataAnalysis.c
-        include/DataAnalysis.h)
+        include/DataAnalysis.h
+)

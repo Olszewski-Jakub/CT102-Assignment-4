@@ -52,4 +52,12 @@ double calculate_intercept(int n, double x[], double y[], double slope);
  */
 double **calculate_points_on_line(int num_points, double x_min, double x_max, double slope, double intercept);
 
+/**
+ * @brief Calculate the average of an array
+ * @param array The array to calculate the average of
+ * @param size The size of the array
+ * @return The average of the array
+ */
+double arrayAverage(double *array, int size);
+
 #endif //QUESTION3_DATAANALYSIS_H

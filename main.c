@@ -24,20 +24,20 @@ int numbers[10000];
  * @param filePath
  * @param resultFilePath
  */
-void processFile(const char *filePath, const char *resultFilePath,int *fileExecutionCount);
+void processFile(const char *filePath, const char *resultFilePath, int *fileExecutionCount);
 
-void plotData(SortingResult sortingResults[], int size, int *fileExecutionCount);
-
-double arrayAverage(double *array, int size);
+void plotData(SortingResult sortingResults[], int size, int numSortingAlgorithms, int resultPerAlgorithm, int *fileExecutionCount);
 
 
+void executeSortingAlgorithms(int *numbers, int *arrIndex, SortingResult *sortingResultsFile, const char *filePath);
 
 int main() {
     int fileExecutionCount = 0;
     processFile(file1, result_file_1, &fileExecutionCount);
-    processFile(file2, result_file_2, &fileExecutionCount);
+//    processFile(file2, result_file_2, &fileExecutionCount);
     return 0;
 }
+
 
 void processFile(const char *filePath, const char *resultFilePath, int *fileExecutionCount) {
     (*fileExecutionCount)++;
@@ -46,39 +46,24 @@ void processFile(const char *filePath, const char *resultFilePath, int *fileExec
     SortingResult sortingResultsFile[NUM_SORTING_ALGORITHMS * NUM_RESULTS_PER_ALGORITHM];
 
     // Pass the address of arrIndex and sortingResultsFile to the function
-    executeSort(numbers, bubbleSort, "Bubble Sort", &arrIndex, sortingResultsFile, filePath);
-    executeSort(numbers, selectionSort, "Selection Sort", &arrIndex, sortingResultsFile, filePath);
-    executeSort(numbers, insertionSort, "Insertion Sort", &arrIndex, sortingResultsFile, filePath);
-    executeSort(numbers, countingSort, "Count Sort", &arrIndex, sortingResultsFile, filePath);
-    executeSort(numbers, mergeSort, "Merge Sort", &arrIndex, sortingResultsFile, filePath);
-    executeSort(numbers, quickSort, "Quick Sort", &arrIndex, sortingResultsFile, filePath);
+    executeSortingAlgorithms(numbers, &arrIndex, sortingResultsFile, filePath);
     printResults(&arrIndex, sortingResultsFile);
     writeResultsToFile(sortingResultsFile, NUM_SORTING_ALGORITHMS * 10, resultFilePath);
     if (!writeResultsToFile(sortingResultsFile, arrSize, resultFilePath)) {
         printf("Error writing to file: %s\n", resultFilePath);
     }
-    plotData(sortingResultsFile, arrSize, fileExecutionCount);
+    plotData(sortingResultsFile, arrSize,NUM_SORTING_ALGORITHMS,NUM_RESULTS_PER_ALGORITHM, fileExecutionCount);
 }
 
-double arrayAverage(double *array, int size) {
-    double sum = 0;
-    for (int i = 0; i < size; i++) {
-        sum += array[i];
-    }
-    double average = sum / size;
-    return average;
-}
+void plotData(SortingResult sortingResults[], int size, int numSortingAlgorithms, int resultPerAlgorithm, int *fileExecutionCount) {
 
-void plotData(SortingResult sortingResults[], int size, int *fileExecutionCount) {
-    //Split the sortingResults array into 6 arrays, one for each sorting algorithm for timetake, comparisons, swaps, array size and functioncalls
-    //Make for xasmple 2d aray fo time taken whre each row is a sorting algorithm and each column is a result
-    // array shoudle be only for time taken and arraya size is [NUM_SORTING_ALGORITHMS][NUM_RESULTS_PER_ALGORITHM]
-    double timeTaken[NUM_SORTING_ALGORITHMS][NUM_RESULTS_PER_ALGORITHM];
-    double comparisons[NUM_SORTING_ALGORITHMS][NUM_RESULTS_PER_ALGORITHM];
-    double swaps[NUM_SORTING_ALGORITHMS][NUM_RESULTS_PER_ALGORITHM];
-    double arraySize[NUM_SORTING_ALGORITHMS][NUM_RESULTS_PER_ALGORITHM];
-    double functionCalls[NUM_SORTING_ALGORITHMS][NUM_RESULTS_PER_ALGORITHM];
-    char *sortingAlgorithms[NUM_SORTING_ALGORITHMS];
+
+    double timeTaken[numSortingAlgorithms][resultPerAlgorithm];
+    double comparisons[numSortingAlgorithms][resultPerAlgorithm];
+    double swaps[numSortingAlgorithms][resultPerAlgorithm];
+    double arraySize[numSortingAlgorithms][resultPerAlgorithm];
+    double functionCalls[numSortingAlgorithms][resultPerAlgorithm];
+    char *sortingAlgorithms[numSortingAlgorithms];
     for (int i = 0; i < size; i++) {
         int algorithmIndex = i / 10;
         int resultIndex = i % 10;
@@ -90,48 +75,52 @@ void plotData(SortingResult sortingResults[], int size, int *fileExecutionCount)
         sortingAlgorithms[algorithmIndex] = sortingResults[i].sortingAlgorithm;
     }
 
-    double timeTakenAverage[NUM_SORTING_ALGORITHMS];
+    double timeTakenAverage[numSortingAlgorithms];
 
-    for (int i = 0; i < NUM_SORTING_ALGORITHMS; i++) {
-        timeTakenAverage[i] = arrayAverage(timeTaken[i], NUM_RESULTS_PER_ALGORITHM);
+    for (int i = 0; i < numSortingAlgorithms; i++) {
+        timeTakenAverage[i] = arrayAverage(timeTaken[i], resultPerAlgorithm);
     }
     // Convert time taken average to milliseconds
-    for (int i = 0; i < NUM_SORTING_ALGORITHMS; i++) {
+    for (int i = 0; i < numSortingAlgorithms; i++) {
         timeTakenAverage[i] = timeTakenAverage[i] * 1000;
     }
-    drawAvgTimeVsAlg(timeTakenAverage, NUM_SORTING_ALGORITHMS,
+
+    double timeTakenAll[size];
+    double comparisonsAll[size];
+    double swapsAll[size];
+    for (int i = 0; i < numSortingAlgorithms; i++) {
+        for (int j = 0; j < resultPerAlgorithm; j++) {
+            timeTakenAll[i * resultPerAlgorithm + j] = timeTaken[i][j];
+            comparisonsAll[i * resultPerAlgorithm + j] = comparisons[i][j];
+        }
+    }
+
+    for (int i = 0; i < numSortingAlgorithms; i++) {
+        int algorithmIndex = i;
+        for (int j = 0; j < resultPerAlgorithm; j++) {
+            timeTakenAll[i * resultPerAlgorithm + j] = timeTaken[algorithmIndex][j];
+            comparisonsAll[i * resultPerAlgorithm + j] = comparisons[algorithmIndex][j] / 1000000;
+            swapsAll[i * resultPerAlgorithm + j] = swaps[algorithmIndex][j] / 1000000;
+        }
+    }
+    drawAvgTimeVsAlg(timeTakenAverage, numSortingAlgorithms,
                      "Average Time Taken vs Sorting Algorithm", "Time Taken (ms)", sortingAlgorithms, GRAPH_PATH,
                      constructFileName("avg_vs_time_file", *fileExecutionCount));
 
+    plotAndAnalyzeDataPoints(comparisonsAll, timeTakenAll, size,
+                             GRAPH_PATH, constructFileName("comp_vs_time", *fileExecutionCount),
+                             "Comparisons vs Time Taken)", "Time taken (ms)", "Comparisons (Millions)");
 
-    //Draw sctter plot comparing comparisons vs time taken for each sorting algorithm
-    double timeTakenAll[NUM_SORTING_ALGORITHMS * NUM_RESULTS_PER_ALGORITHM];
-    double comparisonsAll[NUM_SORTING_ALGORITHMS * NUM_RESULTS_PER_ALGORITHM];
-    double swapsAll[NUM_SORTING_ALGORITHMS * NUM_RESULTS_PER_ALGORITHM];
-    for (int i = 0; i < NUM_SORTING_ALGORITHMS; i++) {
-        for (int j = 0; j < NUM_RESULTS_PER_ALGORITHM; j++) {
-            timeTakenAll[i * NUM_RESULTS_PER_ALGORITHM + j] = timeTaken[i][j];
-            comparisonsAll[i * NUM_RESULTS_PER_ALGORITHM + j] = comparisons[i][j];
-        }
-    }
-
-    for (int i = 0; i < NUM_SORTING_ALGORITHMS; i++) {
-        int algorithmIndex = i;
-        int resultIndex = i % 6;
-        for (int j = 0; j < NUM_RESULTS_PER_ALGORITHM; j++) {
-
-            timeTakenAll[i * NUM_RESULTS_PER_ALGORITHM + j] = timeTaken[algorithmIndex][j];
-            comparisonsAll[i * NUM_RESULTS_PER_ALGORITHM + j] = comparisons[algorithmIndex][j] / 1000000;
-            swapsAll[i * NUM_RESULTS_PER_ALGORITHM + j] = swaps[algorithmIndex][j] /1000000;
-        }
-    }
-
-
-    plotAndAnalyzeDataPoints(comparisonsAll, timeTakenAll, NUM_SORTING_ALGORITHMS * NUM_RESULTS_PER_ALGORITHM,
-                             GRAPH_PATH,constructFileName("comp_vs_time", *fileExecutionCount), "Comparisons vs Time Taken)", "Time taken (ms)", "Comparisons (Millions)");
-
-    //Draw sctter plot comparing swaps vs time taken for each sorting algorithm
-    plotAndAnalyzeDataPoints(swapsAll, timeTakenAll, NUM_SORTING_ALGORITHMS * NUM_RESULTS_PER_ALGORITHM,
-                             GRAPH_PATH,constructFileName("swaps_vs_time", *fileExecutionCount), "Swaps vs Time Taken", "Time taken (ms)", "Swaps (Millions)");
+    plotAndAnalyzeDataPoints(swapsAll, timeTakenAll, size,
+                             GRAPH_PATH, constructFileName("swaps_vs_time", *fileExecutionCount), "Swaps vs Time Taken",
+                             "Time taken (ms)", "Swaps (Millions)");
 }
 
+void executeSortingAlgorithms(int *numbers, int *arrIndex, SortingResult *sortingResultsFile, const char *filePath) {
+    executeSort(numbers, bubbleSort, "Bubble Sort", arrIndex, sortingResultsFile, filePath);
+    executeSort(numbers, selectionSort, "Selection Sort", arrIndex, sortingResultsFile, filePath);
+    executeSort(numbers, insertionSort, "Insertion Sort", arrIndex, sortingResultsFile, filePath);
+    executeSort(numbers, countingSort, "Count Sort", arrIndex, sortingResultsFile, filePath);
+    executeSort(numbers, mergeSort, "Merge Sort", arrIndex, sortingResultsFile, filePath);
+    executeSort(numbers, quickSort, "Quick Sort", arrIndex, sortingResultsFile, filePath);
+}
