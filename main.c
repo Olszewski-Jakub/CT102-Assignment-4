@@ -3,7 +3,8 @@
 #include "include/SortingOperations.h"
 #include "include/SortingAlgorithms.h"
 #include "include/PlotData.h"
-
+#include "plot/supportLib.h"
+#include "include/CharOperations.h"
 
 #define file1 "C://Users//jolsz//uni//freshman//CT102 - Algorithms & Information Systems//assignmnets//Assignment_4//Sorting_Algorithms_Performance_Analysis//files//file1.txt"
 #define file2 "C://Users//jolsz//uni//freshman//CT102 - Algorithms & Information Systems//assignmnets//Assignment_4//Sorting_Algorithms_Performance_Analysis//files//file2.txt"
@@ -31,6 +32,7 @@ void plotData(SortingResult sortingResults[], int size);
 double arrayAverage(double *array, int size);
 
 
+
 int main() {
 
     processFile(file1, result_file_1);
@@ -49,8 +51,8 @@ void processFile(const char *filePath, const char *resultFilePath) {
     executeSort(numbers, countingSort, "Count Sort", &arrIndex, sortingResultsFile, filePath);
     executeSort(numbers, mergeSort, "Merge Sort", &arrIndex, sortingResultsFile, filePath);
     executeSort(numbers, quickSort, "Quick Sort", &arrIndex, sortingResultsFile, filePath);
-    printResults(&arrIndex, sortingResultsFile);
-//    writeResultsToFile(sortingResultsFile, NUM_SORTING_ALGORITHMS * 10, resultFilePath);
+//    printResults(&arrIndex, sortingResultsFile);
+    writeResultsToFile(sortingResultsFile, NUM_SORTING_ALGORITHMS * 10, resultFilePath);
     if (!writeResultsToFile(sortingResultsFile, NUM_SORTING_ALGORITHMS * NUM_RESULTS_PER_ALGORITHM, resultFilePath)) {
         printf("Error writing to file: %s\n", resultFilePath);
     }
@@ -78,7 +80,7 @@ void plotData(SortingResult sortingResults[], int size) {
     char *sortingAlgorithms[NUM_SORTING_ALGORITHMS];
     for (int i = 0; i < size; i++) {
         int algorithmIndex = i / 10;
-        int resultIndex = i % 6;
+        int resultIndex = i % 10;
         timeTaken[algorithmIndex][resultIndex] = sortingResults[i].timeTaken;
         comparisons[algorithmIndex][resultIndex] = sortingResults[i].comparisons;
         swaps[algorithmIndex][resultIndex] = sortingResults[i].swaps;
@@ -98,8 +100,30 @@ void plotData(SortingResult sortingResults[], int size) {
     }
     drawAvgTimeVsAlg(timeTakenAverage, NUM_SORTING_ALGORITHMS,
                      "Average Time Taken vs Sorting Algorithm", "Time Taken (ms)", sortingAlgorithms, GRAPH_PATH);
+
+
+    //Draw sctter plot comparing comparisons vs time taken for each sorting algorithm
+    double timeTakenAll[NUM_SORTING_ALGORITHMS * NUM_RESULTS_PER_ALGORITHM];
+    double comparisonsAll[NUM_SORTING_ALGORITHMS * NUM_RESULTS_PER_ALGORITHM];
+
+    for (int i = 0; i < NUM_SORTING_ALGORITHMS; i++) {
+        for (int j = 0; j < NUM_RESULTS_PER_ALGORITHM; j++) {
+            timeTakenAll[i * NUM_RESULTS_PER_ALGORITHM + j] = timeTaken[i][j];
+            comparisonsAll[i * NUM_RESULTS_PER_ALGORITHM + j] = comparisons[i][j];
+        }
+    }
+
+    for (int i = 0; i < NUM_SORTING_ALGORITHMS; i++) {
+        int algorithmIndex = i;
+        int resultIndex = i % 6;
+        for (int j = 0; j < NUM_RESULTS_PER_ALGORITHM; j++) {
+
+            timeTakenAll[i * NUM_RESULTS_PER_ALGORITHM + j] = timeTaken[algorithmIndex][j];
+            comparisonsAll[i * NUM_RESULTS_PER_ALGORITHM + j] = comparisons[algorithmIndex][j] / 1000000;
+        }
+    }
+
+
+    drawCompVsTimeTaken(comparisonsAll, timeTakenAll,NUM_SORTING_ALGORITHMS * NUM_RESULTS_PER_ALGORITHM, GRAPH_PATH);
 }
-//
-
-
 

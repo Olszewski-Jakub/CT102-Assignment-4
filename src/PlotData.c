@@ -104,3 +104,74 @@ BarPlotSeries* createBarPlotSeries(double* avgTime, size_t length, RGBA* color) 
 
     return series;
 }
+
+// Draw scatter plot for each sorting algorithm comparisons vs input size on one graph
+void drawCompVsTimeTaken(double comparisons[], double timeTaken[], int size, const char *graphPath) {
+
+    char *xLabel = "Comparisons (Millions)";
+    char *yLabel = "Time taken (ms)";
+    char *title = "Comparisons vs Time Taken";
+    RGBABitmapImageReference *imageReference = CreateRGBABitmapImageReference();
+    StringReference *errorMessage;
+    errorMessage = (StringReference *) malloc(sizeof(StringReference));
+
+    ScatterPlotSettings *settings = (ScatterPlotSettings *) malloc(sizeof(ScatterPlotSettings));
+    ScatterPlotSeries *series = createScatterPlotSeries(comparisons, timeTaken, size,
+                                                        CreateRGBColor(1, 0, 0));
+    settings->scatterPlotSeries = &series;
+    settings->scatterPlotSeriesLength = 1;
+    settings->autoBoundaries = true;
+    settings->xMax = 100.0;
+    settings->xMin = -10.0;
+    settings->yMax = 10.0;
+    settings->yMin = -1.0;
+    settings->autoPadding = true;
+    settings->xPadding = 10.0;
+    settings->yPadding = 10.0;
+    settings->xLabel = ConvertToWString(xLabel);
+    settings->xLabelLength = strlen(xLabel);
+    settings->yLabel = ConvertToWString(yLabel);
+    settings->yLabelLength = strlen(yLabel);
+    settings->title = ConvertToWString(title);
+    settings->titleLength = strlen(title);
+    settings->showGrid = true;
+    settings->gridColor = CreateRGBColor(0.5, 0.5, 0.5);
+    settings->xAxisAuto = true;
+    settings->xAxisTop = false;
+    settings->xAxisBottom = true;
+    settings->yAxisAuto = true;
+    settings->yAxisLeft = true;
+    settings->yAxisRight = false;
+    settings->width = 800;
+    settings->height = 400;
+
+    DrawScatterPlotFromSettings(imageReference, settings, errorMessage);
+
+    // Save the image to a file
+    size_t length;
+    double *pngdata = ConvertToPNG(&length, imageReference->image);
+
+    WriteToFile(pngdata, length, combineCharArrays(graphPath, "//comp_vs_time.png"));
+
+    free(settings);
+    free(series);
+    free(errorMessage);
+
+}
+
+ScatterPlotSeries *createScatterPlotSeries(double *x, double *y, int size, RGBA *color) {
+    ScatterPlotSeries *series = (ScatterPlotSeries *) malloc(sizeof(ScatterPlotSeries));
+    series->linearInterpolation = false;
+    series->pointType = L"dots";
+    series->pointTypeLength = 4;
+    series->lineType = L"solid";
+    series->lineTypeLength = 5;
+    series->lineThickness = 2;
+    series->xs = x;
+    series->xsLength = size;
+    series->ys = y;
+    series->ysLength = size;
+    series->color = color;
+
+    return series;
+}

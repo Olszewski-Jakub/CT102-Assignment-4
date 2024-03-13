@@ -38,4 +38,6 @@ CMakeFiles/question3.dir/main.c.obj: \
  C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/_mingw_stat64.h \
  C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
  C:/Users/jolsz/uni/freshman/CT102\ -\ Algorithms\ &\ Information\ Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/plot/supportLib.h \
+ C:\Users\jolsz\uni\freshman\CT102\ -\ Algorithms\ &\ Information\ Systems\assignmnets\Assignment_4\Sorting_Algorithms_Performance_Analysis\include/CharOperations.h \
+ C:\Users\jolsz\uni\freshman\CT102\ -\ Algorithms\ &\ Information\ Systems\assignmnets\Assignment_4\Sorting_Algorithms_Performance_Analysis\plot/supportLib.h \
  C:\Users\jolsz\uni\freshman\CT102\ -\ Algorithms\ &\ Information\ Systems\assignmnets\Assignment_4\Sorting_Algorithms_Performance_Analysis\include/CharOperations.h
