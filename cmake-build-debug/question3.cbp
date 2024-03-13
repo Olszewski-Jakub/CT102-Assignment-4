@@ -81,6 +81,9 @@
 		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/include/CharOperations.h">
 			<Option target="question3"/>
 		</Unit>
+		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/include/DataAnalysis.h">
+			<Option target="question3"/>
+		</Unit>
 		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/include/PlotData.h">
 			<Option target="question3"/>
 		</Unit>
@@ -100,6 +103,9 @@
 			<Option target="question3"/>
 		</Unit>
 		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/src/CharOperations.c">
+			<Option target="question3"/>
+		</Unit>
+		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/src/DataAnalysis.c">
 			<Option target="question3"/>
 		</Unit>
 		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/src/FileOperations.c">

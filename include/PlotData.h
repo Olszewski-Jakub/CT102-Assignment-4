@@ -7,8 +7,10 @@
 
 #include "../plot/pbPlots.h"
 #include "../plot/supportLib.h"
+#include "DataAnalysis.h"
 #include "CharOperations.h"
 #include <malloc.h>
+
 
 void drawAvgTimeVsAlg(double *avgTime, int size, char *title, char *yLabel, char *xLabel[], char *GRAPH_PATH);
 
@@ -16,8 +18,7 @@ void drawAvgTimeVsAlg(double *avgTime, int size, char *title, char *yLabel, char
 
 BarPlotSeries *createBarPlotSeries(double *avgTime, size_t length, RGBA *color);
 
-ScatterPlotSeries *createScatterPlotSeries(double *x, double *y, int size, RGBA *color);
-
+ScatterPlotSeries *createScatterPlotSeries(double *x, double *y, int size, RGBA *color, int interpolationType, int lineType);
 void drawCompVsTimeTaken(double comparisons[], double timeTaken[], int size, const char *graphPath);
 
 #endif //QUESTION3_PLOTDATA_H

@@ -51,7 +51,7 @@ void processFile(const char *filePath, const char *resultFilePath) {
     executeSort(numbers, countingSort, "Count Sort", &arrIndex, sortingResultsFile, filePath);
     executeSort(numbers, mergeSort, "Merge Sort", &arrIndex, sortingResultsFile, filePath);
     executeSort(numbers, quickSort, "Quick Sort", &arrIndex, sortingResultsFile, filePath);
-//    printResults(&arrIndex, sortingResultsFile);
+    printResults(&arrIndex, sortingResultsFile);
     writeResultsToFile(sortingResultsFile, NUM_SORTING_ALGORITHMS * 10, resultFilePath);
     if (!writeResultsToFile(sortingResultsFile, NUM_SORTING_ALGORITHMS * NUM_RESULTS_PER_ALGORITHM, resultFilePath)) {
         printf("Error writing to file: %s\n", resultFilePath);

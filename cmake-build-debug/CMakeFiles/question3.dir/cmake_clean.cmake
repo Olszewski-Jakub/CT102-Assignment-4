@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/question3.dir/plot/supportLib.c.obj.d"
   "CMakeFiles/question3.dir/src/CharOperations.c.obj"
   "CMakeFiles/question3.dir/src/CharOperations.c.obj.d"
+  "CMakeFiles/question3.dir/src/DataAnalysis.c.obj"
+  "CMakeFiles/question3.dir/src/DataAnalysis.c.obj.d"
   "CMakeFiles/question3.dir/src/FileOperations.c.obj"
   "CMakeFiles/question3.dir/src/FileOperations.c.obj.d"
   "CMakeFiles/question3.dir/src/PlotData.c.obj"

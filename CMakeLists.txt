@@ -14,4 +14,6 @@ add_executable(question3 main.c
         plot/pbPlots.c
         plot/supportLib.c
         src/CharOperations.c
-        include/CharOperations.h)
+        include/CharOperations.h
+        src/DataAnalysis.c
+        include/DataAnalysis.h)

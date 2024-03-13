@@ -224,6 +224,30 @@ src/CharOperations.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\question3.dir\build.make CMakeFiles/question3.dir/src/CharOperations.c.s
 .PHONY : src/CharOperations.c.s
 
+src/DataAnalysis.obj: src/DataAnalysis.c.obj
+.PHONY : src/DataAnalysis.obj
+
+# target to build an object file
+src/DataAnalysis.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\question3.dir\build.make CMakeFiles/question3.dir/src/DataAnalysis.c.obj
+.PHONY : src/DataAnalysis.c.obj
+
+src/DataAnalysis.i: src/DataAnalysis.c.i
+.PHONY : src/DataAnalysis.i
+
+# target to preprocess a source file
+src/DataAnalysis.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\question3.dir\build.make CMakeFiles/question3.dir/src/DataAnalysis.c.i
+.PHONY : src/DataAnalysis.c.i
+
+src/DataAnalysis.s: src/DataAnalysis.c.s
+.PHONY : src/DataAnalysis.s
+
+# target to generate assembly for a file
+src/DataAnalysis.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\question3.dir\build.make CMakeFiles/question3.dir/src/DataAnalysis.c.s
+.PHONY : src/DataAnalysis.c.s
+
 src/FileOperations.obj: src/FileOperations.c.obj
 .PHONY : src/FileOperations.obj
 
@@ -389,6 +413,9 @@ help:
 	@echo ... src/CharOperations.obj
 	@echo ... src/CharOperations.i
 	@echo ... src/CharOperations.s
+	@echo ... src/DataAnalysis.obj
+	@echo ... src/DataAnalysis.i
+	@echo ... src/DataAnalysis.s
 	@echo ... src/FileOperations.obj
 	@echo ... src/FileOperations.i
 	@echo ... src/FileOperations.s

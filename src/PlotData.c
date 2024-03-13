@@ -14,8 +14,6 @@ wchar_t *ConvertToWString(const char *str) {
 }
 
 
-
-
 void drawAvgTimeVsAlg(double *avgTime, int size, char *title, char *yLabel, char *xLabel[], char *GRAPH_PATH) {
 
 
@@ -26,8 +24,8 @@ void drawAvgTimeVsAlg(double *avgTime, int size, char *title, char *yLabel, char
 
     BarPlotSettings *settings = (BarPlotSettings *) malloc(sizeof(BarPlotSettings));
 
-    RGBA* color = CreateRGBColor(1, 0, 0); // Red color
-    BarPlotSeries* series = createBarPlotSeries(avgTime, size, color);
+    RGBA *color = CreateRGBColor(1, 0, 0); // Red color
+    BarPlotSeries *series = createBarPlotSeries(avgTime, size, color);
 
     wchar_t *titleW = ConvertToWString(title);
     wchar_t *yLabelW = ConvertToWString(yLabel);
@@ -38,7 +36,7 @@ void drawAvgTimeVsAlg(double *avgTime, int size, char *title, char *yLabel, char
     settings->barPlotSeries = &series;
     settings->barPlotSeriesLength = 1;
     settings->width = width;
-    settings->height =height;
+    settings->height = height;
     settings->autoBoundaries = true;
     settings->yMax = 100.0;
     settings->yMin = 0.0;
@@ -89,9 +87,9 @@ void drawAvgTimeVsAlg(double *avgTime, int size, char *title, char *yLabel, char
 }
 
 
-BarPlotSeries* createBarPlotSeries(double* avgTime, size_t length, RGBA* color) {
+BarPlotSeries *createBarPlotSeries(double *avgTime, size_t length, RGBA *color) {
     // Allocate memory for a new BarPlotSeries
-    BarPlotSeries* series = (BarPlotSeries*) malloc(sizeof(BarPlotSeries));
+    BarPlotSeries *series = (BarPlotSeries *) malloc(sizeof(BarPlotSeries));
 
     // Set the ys to the avgTime array
     series->ys = avgTime;
@@ -107,6 +105,53 @@ BarPlotSeries* createBarPlotSeries(double* avgTime, size_t length, RGBA* color) 
 
 // Draw scatter plot for each sorting algorithm comparisons vs input size on one graph
 void drawCompVsTimeTaken(double comparisons[], double timeTaken[], int size, const char *graphPath) {
+    ScatterPlotSeries **series = (ScatterPlotSeries **) malloc(sizeof(ScatterPlotSeries *) * 2);
+    // Using Linear Regression to find the best fit line
+
+    //Find amx and min of comparisons
+    double max = comparisons[0];
+    double min = comparisons[0];
+    for (int i = 0; i < size; i++) {
+        if (comparisons[i] > max) {
+            max = comparisons[i];
+        }
+        if (comparisons[i] < min) {
+            min = comparisons[i];
+        }
+    }
+
+    //Find amx and min of timeTaken
+    double maxTime = timeTaken[0];
+    double minTime = timeTaken[0];
+    for (int i = 0; i < size; i++) {
+        if (timeTaken[i] > maxTime) {
+            maxTime = timeTaken[i];
+        }
+        if (timeTaken[i] < minTime) {
+            minTime = timeTaken[i];
+        }
+    }
+
+    double slope = calculate_slope(size, comparisons, timeTaken);
+    double intercept = calculate_intercept(size, comparisons, timeTaken, slope);
+    double **points = calculate_points_on_line(2, 0, max, slope, intercept);
+
+
+
+    double *xFit = (double *) malloc(sizeof(double) * 2);
+    double *yFit = (double *) malloc(sizeof(double) * 2);
+    //trasdfer points from 2d array to 1d array
+    for (int i = 0; i < 2; i++) {
+        xFit[i] = points[i][0];
+        yFit[i] = points[i][1];
+    }
+
+    ScatterPlotSeries *bestFitSeries = createScatterPlotSeries(xFit, yFit, 2, CreateRGBColor(0.0, 0.482, 1),
+                                                               1, 0);
+    ScatterPlotSeries *pointsSeries = createScatterPlotSeries(comparisons, timeTaken, size, CreateRGBColor(1, 0, 0), 0,
+                                                              0);
+    series[0] = bestFitSeries;
+    series[1] = pointsSeries;
 
     char *xLabel = "Comparisons (Millions)";
     char *yLabel = "Time taken (ms)";
@@ -116,15 +161,14 @@ void drawCompVsTimeTaken(double comparisons[], double timeTaken[], int size, con
     errorMessage = (StringReference *) malloc(sizeof(StringReference));
 
     ScatterPlotSettings *settings = (ScatterPlotSettings *) malloc(sizeof(ScatterPlotSettings));
-    ScatterPlotSeries *series = createScatterPlotSeries(comparisons, timeTaken, size,
-                                                        CreateRGBColor(1, 0, 0));
-    settings->scatterPlotSeries = &series;
-    settings->scatterPlotSeriesLength = 1;
+
+    settings->scatterPlotSeries = series;
+    settings->scatterPlotSeriesLength = 2;
     settings->autoBoundaries = true;
     settings->xMax = 100.0;
     settings->xMin = -10.0;
-    settings->yMax = 10.0;
-    settings->yMin = -1.0;
+    settings->yMax = 1.0;
+    settings->yMin = -0.1;
     settings->autoPadding = true;
     settings->xPadding = 10.0;
     settings->yPadding = 10.0;
@@ -137,7 +181,7 @@ void drawCompVsTimeTaken(double comparisons[], double timeTaken[], int size, con
     settings->showGrid = true;
     settings->gridColor = CreateRGBColor(0.5, 0.5, 0.5);
     settings->xAxisAuto = true;
-    settings->xAxisTop = false;
+    settings->xAxisTop = true;
     settings->xAxisBottom = true;
     settings->yAxisAuto = true;
     settings->yAxisLeft = true;
@@ -159,13 +203,15 @@ void drawCompVsTimeTaken(double comparisons[], double timeTaken[], int size, con
 
 }
 
-ScatterPlotSeries *createScatterPlotSeries(double *x, double *y, int size, RGBA *color) {
+ScatterPlotSeries *
+createScatterPlotSeries(double *x, double *y, int size, RGBA *color, int interpolationType, int lineType) {
+
     ScatterPlotSeries *series = (ScatterPlotSeries *) malloc(sizeof(ScatterPlotSeries));
-    series->linearInterpolation = false;
+    series->linearInterpolation = interpolationType;
     series->pointType = L"dots";
     series->pointTypeLength = 4;
-    series->lineType = L"solid";
-    series->lineTypeLength = 5;
+    series->lineType = ConvertToWString(lineType == 0 ? "dashed" : "solid");
+    series->lineTypeLength = lineType == 0 ? 6 : 5;
     series->lineThickness = 2;
     series->xs = x;
     series->xsLength = size;

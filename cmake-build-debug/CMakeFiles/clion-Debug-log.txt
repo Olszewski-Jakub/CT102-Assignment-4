@@ -9,5 +9,5 @@ CMake Deprecation Warning:
 
 
 -- Configuring done (0.2s)
--- Generating done (0.1s)
+-- Generating done (0.2s)
 -- Build files have been written to: C:/Users/jolsz/uni/freshman/CT102 - Algorithms & Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/cmake-build-debug

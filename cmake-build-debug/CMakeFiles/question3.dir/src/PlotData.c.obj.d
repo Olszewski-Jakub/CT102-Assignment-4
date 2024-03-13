@@ -31,4 +31,5 @@ CMakeFiles/question3.dir/src/PlotData.c.obj: \
  C:/Users/jolsz/uni/freshman/CT102\ -\ Algorithms\ &\ Information\ Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/plot/supportLib.h \
  C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/stdio.h \
  C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+ C:/Users/jolsz/uni/freshman/CT102\ -\ Algorithms\ &\ Information\ Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/include/DataAnalysis.h \
  C:/Users/jolsz/uni/freshman/CT102\ -\ Algorithms\ &\ Information\ Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/include/CharOperations.h
