@@ -160,7 +160,7 @@ Before running this project, you need to ensure that your system meets the follo
 4. Compile the project using the following command:
 
 ```bash
-gcc -I ./include -o main main.c ./src/*.c ./plot/*
+gcc -I ./include -o main main.c ./src/*.c ./pbPlot/*
 ```
 
 5. Run the compiled program using the following command:

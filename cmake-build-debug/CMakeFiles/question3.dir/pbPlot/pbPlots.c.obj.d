@@ -1,7 +1,6 @@
-CMakeFiles/question3.dir/src/PlotData.c.obj: \
- C:\Users\jolsz\uni\freshman\CT102\ -\ Algorithms\ &\ Information\ Systems\assignmnets\Assignment_4\Sorting_Algorithms_Performance_Analysis\src\PlotData.c \
- C:/Users/jolsz/uni/freshman/CT102\ -\ Algorithms\ &\ Information\ Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/include/PlotData.h \
- C:/Users/jolsz/uni/freshman/CT102\ -\ Algorithms\ &\ Information\ Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/pbPlot/pbPlots.h \
+CMakeFiles/question3.dir/pbPlot/pbPlots.c.obj: \
+ C:\Users\jolsz\uni\freshman\CT102\ -\ Algorithms\ &\ Information\ Systems\assignmnets\Assignment_4\Sorting_Algorithms_Performance_Analysis\pbPlot\pbPlots.c \
+ C:\Users\jolsz\uni\freshman\CT102\ -\ Algorithms\ &\ Information\ Systems\assignmnets\Assignment_4\Sorting_Algorithms_Performance_Analysis\pbPlot\pbPlots.h \
  C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/stdlib.h \
  C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/corecrt.h \
  C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/_mingw.h \
@@ -27,9 +26,4 @@ CMakeFiles/question3.dir/src/PlotData.c.obj: \
  C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/_mingw_off_t.h \
  C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/_mingw_stat64.h \
  C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl \
- C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
- C:/Users/jolsz/uni/freshman/CT102\ -\ Algorithms\ &\ Information\ Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/pbPlot/supportLib.h \
- C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/stdio.h \
- C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
- C:/Users/jolsz/uni/freshman/CT102\ -\ Algorithms\ &\ Information\ Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/include/DataAnalysis.h \
- C:/Users/jolsz/uni/freshman/CT102\ -\ Algorithms\ &\ Information\ Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/include/CharOperations.h
+ C:/Users/jolsz/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/sec_api/wchar_s.h

@@ -18,7 +18,7 @@ void drawAvgTimeVsAlg(double *avgTime, int size, char *title, char *yLabel, char
                       char *fileName) {
 
 
-    //Drawbar plot from settings
+    //Drawbar pbPlot from settings
     RGBABitmapImageReference *imageReference = CreateRGBABitmapImageReference();
     StringReference *errorMessage;
     errorMessage = (StringReference *) malloc(sizeof(StringReference));
@@ -67,7 +67,7 @@ void drawAvgTimeVsAlg(double *avgTime, int size, char *title, char *yLabel, char
     settings->xLabelsLength = size;
     settings->barBorder = true;
 
-    // Create the bar plot
+    // Create the bar pbPlot
     DrawBarPlotFromSettings(imageReference, settings, errorMessage);
 
     // Save the image to a file
@@ -104,7 +104,7 @@ BarPlotSeries *createBarPlotSeries(double *avgTime, size_t length, RGBA *color) 
     return series;
 }
 
-// Draw scatter plot for each sorting algorithm xAxis vs input size on one graph
+// Draw scatter pbPlot for each sorting algorithm xAxis vs input size on one graph
 void plotAndAnalyzeDataPoints(double xAxis[], double yAxis[], int size, const char *graphPath, const char *fileName,
                               const char *title, const char *yLabel, const char *xLabel) {
     ScatterPlotSeries **series = (ScatterPlotSeries **) malloc(sizeof(ScatterPlotSeries *) * 2);

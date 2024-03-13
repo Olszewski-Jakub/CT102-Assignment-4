@@ -11,8 +11,8 @@ add_executable(question3 main.c
         src/Swap.c
         src/PlotData.c
         include/PlotData.h
-        plot/pbPlots.c
-        plot/supportLib.c
+        pbPlot/pbPlots.c
+        pbPlot/supportLib.c
         src/CharOperations.c
         include/CharOperations.h
         src/DataAnalysis.c

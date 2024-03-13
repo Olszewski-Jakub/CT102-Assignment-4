@@ -152,53 +152,53 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\question3.dir\build.make CMakeFiles/question3.dir/main.c.s
 .PHONY : main.c.s
 
-plot/pbPlots.obj: plot/pbPlots.c.obj
-.PHONY : plot/pbPlots.obj
+pbPlot/pbPlots.obj: pbPlot/pbPlots.c.obj
+.PHONY : pbPlot/pbPlots.obj
 
 # target to build an object file
-plot/pbPlots.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\question3.dir\build.make CMakeFiles/question3.dir/plot/pbPlots.c.obj
-.PHONY : plot/pbPlots.c.obj
+pbPlot/pbPlots.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\question3.dir\build.make CMakeFiles/question3.dir/pbPlot/pbPlots.c.obj
+.PHONY : pbPlot/pbPlots.c.obj
 
-plot/pbPlots.i: plot/pbPlots.c.i
-.PHONY : plot/pbPlots.i
+pbPlot/pbPlots.i: pbPlot/pbPlots.c.i
+.PHONY : pbPlot/pbPlots.i
 
 # target to preprocess a source file
-plot/pbPlots.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\question3.dir\build.make CMakeFiles/question3.dir/plot/pbPlots.c.i
-.PHONY : plot/pbPlots.c.i
+pbPlot/pbPlots.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\question3.dir\build.make CMakeFiles/question3.dir/pbPlot/pbPlots.c.i
+.PHONY : pbPlot/pbPlots.c.i
 
-plot/pbPlots.s: plot/pbPlots.c.s
-.PHONY : plot/pbPlots.s
+pbPlot/pbPlots.s: pbPlot/pbPlots.c.s
+.PHONY : pbPlot/pbPlots.s
 
 # target to generate assembly for a file
-plot/pbPlots.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\question3.dir\build.make CMakeFiles/question3.dir/plot/pbPlots.c.s
-.PHONY : plot/pbPlots.c.s
+pbPlot/pbPlots.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\question3.dir\build.make CMakeFiles/question3.dir/pbPlot/pbPlots.c.s
+.PHONY : pbPlot/pbPlots.c.s
 
-plot/supportLib.obj: plot/supportLib.c.obj
-.PHONY : plot/supportLib.obj
+pbPlot/supportLib.obj: pbPlot/supportLib.c.obj
+.PHONY : pbPlot/supportLib.obj
 
 # target to build an object file
-plot/supportLib.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\question3.dir\build.make CMakeFiles/question3.dir/plot/supportLib.c.obj
-.PHONY : plot/supportLib.c.obj
+pbPlot/supportLib.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\question3.dir\build.make CMakeFiles/question3.dir/pbPlot/supportLib.c.obj
+.PHONY : pbPlot/supportLib.c.obj
 
-plot/supportLib.i: plot/supportLib.c.i
-.PHONY : plot/supportLib.i
+pbPlot/supportLib.i: pbPlot/supportLib.c.i
+.PHONY : pbPlot/supportLib.i
 
 # target to preprocess a source file
-plot/supportLib.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\question3.dir\build.make CMakeFiles/question3.dir/plot/supportLib.c.i
-.PHONY : plot/supportLib.c.i
+pbPlot/supportLib.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\question3.dir\build.make CMakeFiles/question3.dir/pbPlot/supportLib.c.i
+.PHONY : pbPlot/supportLib.c.i
 
-plot/supportLib.s: plot/supportLib.c.s
-.PHONY : plot/supportLib.s
+pbPlot/supportLib.s: pbPlot/supportLib.c.s
+.PHONY : pbPlot/supportLib.s
 
 # target to generate assembly for a file
-plot/supportLib.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\question3.dir\build.make CMakeFiles/question3.dir/plot/supportLib.c.s
-.PHONY : plot/supportLib.c.s
+pbPlot/supportLib.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\question3.dir\build.make CMakeFiles/question3.dir/pbPlot/supportLib.c.s
+.PHONY : pbPlot/supportLib.c.s
 
 src/CharOperations.obj: src/CharOperations.c.obj
 .PHONY : src/CharOperations.obj
@@ -404,12 +404,12 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... plot/pbPlots.obj
-	@echo ... plot/pbPlots.i
-	@echo ... plot/pbPlots.s
-	@echo ... plot/supportLib.obj
-	@echo ... plot/supportLib.i
-	@echo ... plot/supportLib.s
+	@echo ... pbPlot/pbPlots.obj
+	@echo ... pbPlot/pbPlots.i
+	@echo ... pbPlot/pbPlots.s
+	@echo ... pbPlot/supportLib.obj
+	@echo ... pbPlot/supportLib.i
+	@echo ... pbPlot/supportLib.s
 	@echo ... src/CharOperations.obj
 	@echo ... src/CharOperations.i
 	@echo ... src/CharOperations.s

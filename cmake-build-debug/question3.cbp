@@ -90,16 +90,16 @@
 		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/main.c">
 			<Option target="question3"/>
 		</Unit>
-		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/plot/pbPlots.c">
+		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/pbPlot/pbPlots.c">
 			<Option target="question3"/>
 		</Unit>
-		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/plot/pbPlots.h">
+		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/pbPlot/pbPlots.h">
 			<Option target="question3"/>
 		</Unit>
-		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/plot/supportLib.c">
+		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/pbPlot/supportLib.c">
 			<Option target="question3"/>
 		</Unit>
-		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/plot/supportLib.h">
+		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/pbPlot/supportLib.h">
 			<Option target="question3"/>
 		</Unit>
 		<Unit filename="C:/Users/jolsz/uni/freshman/CT102 - Algorithms &amp; Information Systems/assignmnets/Assignment_4/Sorting_Algorithms_Performance_Analysis/src/CharOperations.c">

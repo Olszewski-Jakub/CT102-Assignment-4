@@ -3,7 +3,7 @@
 #include "include/SortingOperations.h"
 #include "include/SortingAlgorithms.h"
 #include "include/PlotData.h"
-#include "plot/supportLib.h"
+
 
 #define file1 "C://Users//jolsz//uni//freshman//CT102 - Algorithms & Information Systems//assignmnets//Assignment_4//Sorting_Algorithms_Performance_Analysis//files//file1.txt"
 #define file2 "C://Users//jolsz//uni//freshman//CT102 - Algorithms & Information Systems//assignmnets//Assignment_4//Sorting_Algorithms_Performance_Analysis//files//file2.txt"
