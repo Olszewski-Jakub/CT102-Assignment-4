@@ -73,7 +73,7 @@ void drawAvgTimeVsAlg(double *avgTime, int size, char *title, char *yLabel, char
     size_t length;
     double *pngdata = ConvertToPNG(&length, imageReference->image);
 
-    WriteToFile(pngdata, length, combineCharArrays(GRAPH_PATH, "//avg_time_vs_alg.png"));
+    WriteToFile(pngdata, length, combineCharArrays(GRAPH_PATH, "avg_time_vs_alg.png"));
     DeleteImage(imageReference->image);
     free(imageReference);
     free(settings);
@@ -103,37 +103,37 @@ BarPlotSeries *createBarPlotSeries(double *avgTime, size_t length, RGBA *color) 
     return series;
 }
 
-// Draw scatter plot for each sorting algorithm comparisons vs input size on one graph
-void drawCompVsTimeTaken(double comparisons[], double timeTaken[], int size, const char *graphPath) {
+// Draw scatter plot for each sorting algorithm xAxis vs input size on one graph
+void plotAndAnalyzeDataPoints(double xAxis[], double yAxis[], int size, const char *graphPath,const char *fileName, const char *title, const char *yLabel, const char *xLabel) {
     ScatterPlotSeries **series = (ScatterPlotSeries **) malloc(sizeof(ScatterPlotSeries *) * 2);
     // Using Linear Regression to find the best fit line
 
-    //Find amx and min of comparisons
-    double max = comparisons[0];
-    double min = comparisons[0];
+    //Find amx and min of xAxis
+    double max = xAxis[0];
+    double min = xAxis[0];
     for (int i = 0; i < size; i++) {
-        if (comparisons[i] > max) {
-            max = comparisons[i];
+        if (xAxis[i] > max) {
+            max = xAxis[i];
         }
-        if (comparisons[i] < min) {
-            min = comparisons[i];
+        if (xAxis[i] < min) {
+            min = xAxis[i];
         }
     }
 
-    //Find amx and min of timeTaken
-    double maxTime = timeTaken[0];
-    double minTime = timeTaken[0];
+    //Find amx and min of yAxis
+    double maxTime = yAxis[0];
+    double minTime = yAxis[0];
     for (int i = 0; i < size; i++) {
-        if (timeTaken[i] > maxTime) {
-            maxTime = timeTaken[i];
+        if (yAxis[i] > maxTime) {
+            maxTime = yAxis[i];
         }
-        if (timeTaken[i] < minTime) {
-            minTime = timeTaken[i];
+        if (yAxis[i] < minTime) {
+            minTime = yAxis[i];
         }
     }
 
-    double slope = calculate_slope(size, comparisons, timeTaken);
-    double intercept = calculate_intercept(size, comparisons, timeTaken, slope);
+    double slope = calculate_slope(size, xAxis, yAxis);
+    double intercept = calculate_intercept(size, xAxis, yAxis, slope);
     double **points = calculate_points_on_line(2, 0, max, slope, intercept);
 
 
@@ -148,14 +148,12 @@ void drawCompVsTimeTaken(double comparisons[], double timeTaken[], int size, con
 
     ScatterPlotSeries *bestFitSeries = createScatterPlotSeries(xFit, yFit, 2, CreateRGBColor(0.0, 0.482, 1),
                                                                1, 0);
-    ScatterPlotSeries *pointsSeries = createScatterPlotSeries(comparisons, timeTaken, size, CreateRGBColor(1, 0, 0), 0,
+    ScatterPlotSeries *pointsSeries = createScatterPlotSeries(xAxis, yAxis, size, CreateRGBColor(1, 0, 0), 0,
                                                               0);
     series[0] = bestFitSeries;
     series[1] = pointsSeries;
 
-    char *xLabel = "Comparisons (Millions)";
-    char *yLabel = "Time taken (ms)";
-    char *title = "Comparisons vs Time Taken";
+
     RGBABitmapImageReference *imageReference = CreateRGBABitmapImageReference();
     StringReference *errorMessage;
     errorMessage = (StringReference *) malloc(sizeof(StringReference));
@@ -185,7 +183,7 @@ void drawCompVsTimeTaken(double comparisons[], double timeTaken[], int size, con
     settings->xAxisBottom = true;
     settings->yAxisAuto = true;
     settings->yAxisLeft = true;
-    settings->yAxisRight = false;
+    settings->yAxisRight = true;
     settings->width = 800;
     settings->height = 400;
 
@@ -195,7 +193,7 @@ void drawCompVsTimeTaken(double comparisons[], double timeTaken[], int size, con
     size_t length;
     double *pngdata = ConvertToPNG(&length, imageReference->image);
 
-    WriteToFile(pngdata, length, combineCharArrays(graphPath, "//comp_vs_time.png"));
+    WriteToFile(pngdata, length, combineCharArrays(graphPath, fileName));
 
     free(settings);
     free(series);

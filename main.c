@@ -105,7 +105,7 @@ void plotData(SortingResult sortingResults[], int size) {
     //Draw sctter plot comparing comparisons vs time taken for each sorting algorithm
     double timeTakenAll[NUM_SORTING_ALGORITHMS * NUM_RESULTS_PER_ALGORITHM];
     double comparisonsAll[NUM_SORTING_ALGORITHMS * NUM_RESULTS_PER_ALGORITHM];
-
+    double swapsAll[NUM_SORTING_ALGORITHMS * NUM_RESULTS_PER_ALGORITHM];
     for (int i = 0; i < NUM_SORTING_ALGORITHMS; i++) {
         for (int j = 0; j < NUM_RESULTS_PER_ALGORITHM; j++) {
             timeTakenAll[i * NUM_RESULTS_PER_ALGORITHM + j] = timeTaken[i][j];
@@ -120,10 +120,16 @@ void plotData(SortingResult sortingResults[], int size) {
 
             timeTakenAll[i * NUM_RESULTS_PER_ALGORITHM + j] = timeTaken[algorithmIndex][j];
             comparisonsAll[i * NUM_RESULTS_PER_ALGORITHM + j] = comparisons[algorithmIndex][j] / 1000000;
+            swapsAll[i * NUM_RESULTS_PER_ALGORITHM + j] = swaps[algorithmIndex][j] /1000000;
         }
     }
 
 
-    drawCompVsTimeTaken(comparisonsAll, timeTakenAll,NUM_SORTING_ALGORITHMS * NUM_RESULTS_PER_ALGORITHM, GRAPH_PATH);
+    plotAndAnalyzeDataPoints(comparisonsAll, timeTakenAll, NUM_SORTING_ALGORITHMS * NUM_RESULTS_PER_ALGORITHM,
+                             GRAPH_PATH,"comp_vs_time.png", "Comparisons vs Time Taken)", "Time taken (ms)", "Comparisons (Millions)");
+
+    //Draw sctter plot comparing swaps vs time taken for each sorting algorithm
+    plotAndAnalyzeDataPoints(swapsAll, timeTakenAll, NUM_SORTING_ALGORITHMS * NUM_RESULTS_PER_ALGORITHM,
+                             GRAPH_PATH,"swaps_vs_time.png", "Swaps vs Time Taken", "Time taken (ms)", "Swaps (Millions)");
 }
 
