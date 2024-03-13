@@ -195,9 +195,9 @@ These libraries are included at the beginning of the relevant source files using
 No external libraries are used in this project. All functionality is achieved using the standard C libraries.
 
 ## Graphs
-![Average Time vs Algorithms](graphs/avg_time_vs_alg.png)
-![Average Comparisons vs Algorithms](graphs/comp_vs_time.png)
-![Average Swaps vs Algorithms](graphs/swaps_vs_time.png)
+![Average Time vs Algorithms](graphs/readme/avg_time_vs_alg.png)
+![Average Comparisons vs Algorithms](graphs/readme/comp_vs_time.png)
+![Average Swaps vs Algorithms](graphs/readme/swaps_vs_time.png)
 
 ## Contact Information
 

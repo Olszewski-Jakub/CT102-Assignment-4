@@ -1,7 +1,3 @@
-//
-// Created by jolsz on 13.03.2024.
-//
-
 #include "../include/DataAnalysis.h"
 
 double calculate_slope(int n, double x[], double y[]) {

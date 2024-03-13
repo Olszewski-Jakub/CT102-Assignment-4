@@ -24,23 +24,25 @@ int numbers[10000];
  * @param filePath
  * @param resultFilePath
  */
-void processFile(const char *filePath, const char *resultFilePath);
+void processFile(const char *filePath, const char *resultFilePath,int *fileExecutionCount);
 
-void plotData(SortingResult sortingResults[], int size);
+void plotData(SortingResult sortingResults[], int size, int *fileExecutionCount);
 
 double arrayAverage(double *array, int size);
 
 
 
 int main() {
-
-    processFile(file1, result_file_1);
-//    processFile(file2, result_file_2);
+    int fileExecutionCount = 0;
+    processFile(file1, result_file_1, &fileExecutionCount);
+    processFile(file2, result_file_2, &fileExecutionCount);
     return 0;
 }
 
-void processFile(const char *filePath, const char *resultFilePath) {
+void processFile(const char *filePath, const char *resultFilePath, int *fileExecutionCount) {
+    (*fileExecutionCount)++;
     int arrIndex = 0;
+    int arrSize = NUM_SORTING_ALGORITHMS * NUM_RESULTS_PER_ALGORITHM;
     SortingResult sortingResultsFile[NUM_SORTING_ALGORITHMS * NUM_RESULTS_PER_ALGORITHM];
 
     // Pass the address of arrIndex and sortingResultsFile to the function
@@ -52,10 +54,10 @@ void processFile(const char *filePath, const char *resultFilePath) {
     executeSort(numbers, quickSort, "Quick Sort", &arrIndex, sortingResultsFile, filePath);
     printResults(&arrIndex, sortingResultsFile);
     writeResultsToFile(sortingResultsFile, NUM_SORTING_ALGORITHMS * 10, resultFilePath);
-    if (!writeResultsToFile(sortingResultsFile, NUM_SORTING_ALGORITHMS * NUM_RESULTS_PER_ALGORITHM, resultFilePath)) {
+    if (!writeResultsToFile(sortingResultsFile, arrSize, resultFilePath)) {
         printf("Error writing to file: %s\n", resultFilePath);
     }
-    plotData(sortingResultsFile, NUM_SORTING_ALGORITHMS * NUM_RESULTS_PER_ALGORITHM);
+    plotData(sortingResultsFile, arrSize, fileExecutionCount);
 }
 
 double arrayAverage(double *array, int size) {
@@ -67,7 +69,7 @@ double arrayAverage(double *array, int size) {
     return average;
 }
 
-void plotData(SortingResult sortingResults[], int size) {
+void plotData(SortingResult sortingResults[], int size, int *fileExecutionCount) {
     //Split the sortingResults array into 6 arrays, one for each sorting algorithm for timetake, comparisons, swaps, array size and functioncalls
     //Make for xasmple 2d aray fo time taken whre each row is a sorting algorithm and each column is a result
     // array shoudle be only for time taken and arraya size is [NUM_SORTING_ALGORITHMS][NUM_RESULTS_PER_ALGORITHM]
@@ -98,7 +100,8 @@ void plotData(SortingResult sortingResults[], int size) {
         timeTakenAverage[i] = timeTakenAverage[i] * 1000;
     }
     drawAvgTimeVsAlg(timeTakenAverage, NUM_SORTING_ALGORITHMS,
-                     "Average Time Taken vs Sorting Algorithm", "Time Taken (ms)", sortingAlgorithms, GRAPH_PATH);
+                     "Average Time Taken vs Sorting Algorithm", "Time Taken (ms)", sortingAlgorithms, GRAPH_PATH,
+                     constructFileName("avg_vs_time_file", *fileExecutionCount));
 
 
     //Draw sctter plot comparing comparisons vs time taken for each sorting algorithm
@@ -125,10 +128,10 @@ void plotData(SortingResult sortingResults[], int size) {
 
 
     plotAndAnalyzeDataPoints(comparisonsAll, timeTakenAll, NUM_SORTING_ALGORITHMS * NUM_RESULTS_PER_ALGORITHM,
-                             GRAPH_PATH,"comp_vs_time.png", "Comparisons vs Time Taken)", "Time taken (ms)", "Comparisons (Millions)");
+                             GRAPH_PATH,constructFileName("comp_vs_time", *fileExecutionCount), "Comparisons vs Time Taken)", "Time taken (ms)", "Comparisons (Millions)");
 
     //Draw sctter plot comparing swaps vs time taken for each sorting algorithm
     plotAndAnalyzeDataPoints(swapsAll, timeTakenAll, NUM_SORTING_ALGORITHMS * NUM_RESULTS_PER_ALGORITHM,
-                             GRAPH_PATH,"swaps_vs_time.png", "Swaps vs Time Taken", "Time taken (ms)", "Swaps (Millions)");
+                             GRAPH_PATH,constructFileName("swaps_vs_time", *fileExecutionCount), "Swaps vs Time Taken", "Time taken (ms)", "Swaps (Millions)");
 }
 

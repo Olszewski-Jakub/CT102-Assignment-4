@@ -14,7 +14,8 @@ wchar_t *ConvertToWString(const char *str) {
 }
 
 
-void drawAvgTimeVsAlg(double *avgTime, int size, char *title, char *yLabel, char *xLabel[], char *GRAPH_PATH) {
+void drawAvgTimeVsAlg(double *avgTime, int size, char *title, char *yLabel, char *xLabel[], char *GRAPH_PATH,
+                      char *fileName) {
 
 
     //Drawbar plot from settings
@@ -73,7 +74,7 @@ void drawAvgTimeVsAlg(double *avgTime, int size, char *title, char *yLabel, char
     size_t length;
     double *pngdata = ConvertToPNG(&length, imageReference->image);
 
-    WriteToFile(pngdata, length, combineCharArrays(GRAPH_PATH, "avg_time_vs_alg.png"));
+    WriteToFile(pngdata, length, combineCharArrays(GRAPH_PATH, fileName));
     DeleteImage(imageReference->image);
     free(imageReference);
     free(settings);
@@ -104,7 +105,8 @@ BarPlotSeries *createBarPlotSeries(double *avgTime, size_t length, RGBA *color) 
 }
 
 // Draw scatter plot for each sorting algorithm xAxis vs input size on one graph
-void plotAndAnalyzeDataPoints(double xAxis[], double yAxis[], int size, const char *graphPath,const char *fileName, const char *title, const char *yLabel, const char *xLabel) {
+void plotAndAnalyzeDataPoints(double xAxis[], double yAxis[], int size, const char *graphPath, const char *fileName,
+                              const char *title, const char *yLabel, const char *xLabel) {
     ScatterPlotSeries **series = (ScatterPlotSeries **) malloc(sizeof(ScatterPlotSeries *) * 2);
     // Using Linear Regression to find the best fit line
 
@@ -135,7 +137,6 @@ void plotAndAnalyzeDataPoints(double xAxis[], double yAxis[], int size, const ch
     double slope = calculate_slope(size, xAxis, yAxis);
     double intercept = calculate_intercept(size, xAxis, yAxis, slope);
     double **points = calculate_points_on_line(2, 0, max, slope, intercept);
-
 
 
     double *xFit = (double *) malloc(sizeof(double) * 2);
