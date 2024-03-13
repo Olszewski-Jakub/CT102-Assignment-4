@@ -160,7 +160,7 @@ Before running this project, you need to ensure that your system meets the follo
 4. Compile the project using the following command:
 
 ```bash
-gcc main.c src\SortingOperations.c src\SortingAlgorithms.c src\swap.c src\FileOperations.c src\ResultManagement.c -o main
+gcc -I ./include -o main main.c ./src/*.c ./plot/*
 ```
 
 5. Run the compiled program using the following command:
@@ -194,6 +194,11 @@ These libraries are included at the beginning of the relevant source files using
 
 No external libraries are used in this project. All functionality is achieved using the standard C libraries.
 
+## Graphs
+![Average Time vs Algorithms](graphs/avg_time_vs_alg.png)
+![Average Comparisons vs Algorithms](graphs/comp_vs_time.png)
+![Average Swaps vs Algorithms](graphs/swaps_vs_time.png)
+
 ## Contact Information
 
 For any queries or suggestions, you can reach out to me at:
@@ -203,4 +208,3 @@ For any queries or suggestions, you can reach out to me at:
 - LinkedIn: [Jakub Olszewski](https://www.linkedin.com/in/j-olszewski/)
 - Portfolio: [Jakub Olszewski - Portfolio](https://jakubolszewski.netlify.app/)
 
-Please note that the email is a placeholder and you should replace it with your actual email address.
