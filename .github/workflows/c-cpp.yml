@@ -28,7 +28,7 @@ jobs:
       - name: Extract CSV Files
         run: |
           mkdir -p artifacts
-          docker exec $(docker ps -lq) sh -c 'cd /app/files && cp *.csv /artifacts'
+          docker exec my_container sh -c 'cd /app/files && cp *.csv /artifacts'
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v2
