@@ -122,33 +122,48 @@ void countingSort(int nums[], int size, int *swaps, int *comparisons, int *funct
     free(output); // Free the memory allocated for the output array
 }
 
+// Merge Sort function
 void mergeSort(int nums[], int size, int *swaps, int *comparisons, int *functionCalls) {
+    // Initialize counters
     *swaps = 0;
     *comparisons = 0;
     *functionCalls = 0;
+    // Call the recursive merge sort function
     mergeSortRecursive(nums, 0, size - 1, swaps, comparisons, functionCalls);
 }
 
+// Recursive function for Merge Sort
 void mergeSortRecursive(int arrA[], int lb, int ub, int *swaps, int *comparisons, int *functionCalls) {
-
+    // Increment function call count
     (*functionCalls)++;
     int mid;
+    // If lower bound is less than upper bound
     if (lb < ub) {
+        // Calculate mid point
         mid = (lb + ub) / 2;
+        // Recursively sort first half
         mergeSortRecursive(arrA, lb, mid, swaps, comparisons, functionCalls);
+        // Recursively sort second half
         mergeSortRecursive(arrA, mid + 1, ub, swaps, comparisons, functionCalls);
+        // Merge the two halves
         merge(arrA, lb, mid, ub, swaps, comparisons, functionCalls);
     }
 }
 
+// Merge function for Merge Sort
 void merge(int arrA[], int lb, int mid, int ub, int *swaps, int *comparisons, int *functionCalls) {
-    (*functionCalls)++; // Increment the function call count
+    // Increment the function call count
+    (*functionCalls)++;
     int i, j, k;
+    // Calculate size of the array to be merged
     int size = ub - lb + 1;
+    // Allocate memory for temporary array
     int *arrC = (int *) calloc(size, sizeof(int));
+    // Initialize indices
     i = lb;
     j = mid + 1;
     k = 0;
+    // Merge the two halves into temporary array
     while (i <= mid && j <= ub) {
         (*comparisons)++;
         if (arrA[i] <= arrA[j]) {
@@ -161,18 +176,21 @@ void merge(int arrA[], int lb, int mid, int ub, int *swaps, int *comparisons, in
         k++;
         (*swaps)++;
     }
+    // Copy remaining elements from first half, if any
     while (i <= mid) {
         arrC[k] = arrA[i];
         i++;
         k++;
         (*swaps)++;
     }
+    // Copy remaining elements from second half, if any
     while (j <= ub) {
         arrC[k] = arrA[j];
         j++;
         k++;
         (*swaps)++;
     }
+    // Copy sorted array back to original array
     i = lb;
     k = 0;
     while (i <= ub) {
@@ -180,29 +198,42 @@ void merge(int arrA[], int lb, int mid, int ub, int *swaps, int *comparisons, in
         i++;
         k++;
     }
+    // Free dynamically allocated memory
     free(arrC);
 }
 
+// Quick Sort function
 void quickSort(int nums[], int size, int *swaps, int *comparisons, int *functionCalls) {
+    // Initialize counters
     *swaps = 0;
     *comparisons = 0;
     *functionCalls = 0;
+    // Call the recursive quick sort function
     quickSortRecursive(nums, 0, size - 1, swaps, comparisons, functionCalls);
 }
 
-
+// Recursive function for Quick Sort
 void quickSortRecursive(int arrA[], int startval, int endval, int *swaps, int *comparisons, int *functionCalls) {
+    // Increment function call count
     (*functionCalls)++;
+    // If there are more than one elements to sort
     if ((endval - startval) >= 1) {
+        // Partition the array and get the pivot position
         int k = partition(arrA, startval, endval, swaps, comparisons, functionCalls);
+        // Recursively sort elements before pivot
         quickSortRecursive(arrA, startval, k - 1, swaps, comparisons, functionCalls);
+        // Recursively sort elements after pivot
         quickSortRecursive(arrA, k + 1, endval, swaps, comparisons, functionCalls);
     }
 }
 
+// Partition function for Quick Sort
 int partition(int arrA[], int startval, int endval, int *swaps, int *comparisons, int *functionCalls) {
+    // Increment function call count
     (*functionCalls)++;
+    // Calculate mid point
     int mid = startval + (endval - startval) / 2;
+    // Sort start, mid and end elements to find the median
     if (arrA[startval] > arrA[mid]) {
         swap(&arrA[startval], &arrA[mid]);
         (*swaps)++;
@@ -215,11 +246,13 @@ int partition(int arrA[], int startval, int endval, int *swaps, int *comparisons
         swap(&arrA[mid], &arrA[endval]);
         (*swaps)++;
     }
+    // Swap mid element with start element
     swap(&arrA[mid], &arrA[startval]);
     (*comparisons) += 3;
+    // Choose pivot as start element
     int pivot = arrA[startval];
     int k = startval;
-
+    // Partition the array around pivot
     for (int j = startval + 1; j <= endval; j++) {
         (*comparisons)++;
         if (arrA[j] <= pivot) {
@@ -230,7 +263,9 @@ int partition(int arrA[], int startval, int endval, int *swaps, int *comparisons
             }
         }
     }
+    // Swap pivot with element at k
     swap(&arrA[k], &arrA[startval]);
     (*swaps)++;
+    // Return pivot position
     return k;
 }
