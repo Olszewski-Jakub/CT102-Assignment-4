@@ -2,9 +2,8 @@ name: Build and Extract Main Executable and CSV Files
 
 on:
   push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+    branches:
+      - main  # Change this to your main branch name
 
 jobs:
   build:
@@ -20,11 +19,15 @@ jobs:
       - name: Run Docker Container
         run: docker run my_c_project
 
-      - name: Extract Main Executable and CSV Files
+      - name: Extract Main Executable
         run: |
           mkdir -p artifacts
           docker cp $(docker ps -lq):/app/main ./artifacts/main.exe
-          docker cp $(docker ps -lq):/app/files/*.csv ./artifacts/
+
+      - name: Extract CSV Files
+        run: |
+          mkdir -p artifacts
+          docker exec $(docker ps -lq) sh -c 'cd /app/files && cp *.csv /artifacts'
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v2
