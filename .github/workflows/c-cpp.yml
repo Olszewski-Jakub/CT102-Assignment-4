@@ -23,7 +23,7 @@ jobs:
       - name: Extract Main Executable
         run: |
           mkdir -p artifacts
-          docker cp $(docker ps -lq):/app/main ./artifacts/main.exe
+          docker cp $(docker ps -lq):/app/ ./artifacts
 
       - name: Extract All Files from ./files/result
         run: |
