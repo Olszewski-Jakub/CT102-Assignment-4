@@ -10,11 +10,18 @@ add_executable(question3 main.c
         src/ResultManagement.c
         src/Swap.c
         src/PlotData.c
-        include/PlotData.h
-        pbPlot/pbPlots.c
-        pbPlot/supportLib.c
         src/CharOperations.c
-        include/CharOperations.h
         src/DataAnalysis.c
         include/DataAnalysis.h
+        include/PlotData.h
+        include/CharOperations.h
+        include/ResultManagement.h
+        include/SortingOperations.h
+        include/SortingAlgorithms.h
+        include/FileOperations.h
+        include/Swap.h
+        pbPlot/pbPlots.c
+        pbPlot/supportLib.c
+        pbPlot/supportLib.h
+        pbPlot/pbPlots.h
 )
