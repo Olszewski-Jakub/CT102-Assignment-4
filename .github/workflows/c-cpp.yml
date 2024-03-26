@@ -29,7 +29,7 @@ jobs:
         run: |
           cd artifacts
           mkdir -p result
-          docker cp $(docker ps -lq):/app/files/result ./result
+          docker cp $(docker ps -lq):/app/files/result .
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v2
