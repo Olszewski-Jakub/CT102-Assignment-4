@@ -1,3 +1,0 @@
-C:\Users\jolsz\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E rm -f CMakeFiles\question3.dir/objects.a
-C:\Users\jolsz\AppData\Local\Programs\CLion\bin\mingw\bin\ar.exe qc CMakeFiles\question3.dir/objects.a @CMakeFiles\question3.dir\objects1.rsp
-C:\Users\jolsz\AppData\Local\Programs\CLion\bin\mingw\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\question3.dir/objects.a -Wl,--no-whole-archive -o question3.exe -Wl,--out-implib,libquestion3.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\question3.dir\linkLibs.rsp
