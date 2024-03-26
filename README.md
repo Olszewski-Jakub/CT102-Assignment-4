@@ -1,6 +1,52 @@
-# CT102 - Sorting Algorithms Performance Analysis
+<p align="center">
+  <img src="https://cdn-icons-png.flaticon.com/512/6295/6295417.png" width="100" />
+</p>
+<p align="center">
+    <h1 align="center">SORTING-ALGORITHMS-PERFORMANCE-ANALYSIS</h1>
+</p>
+<p align="center">
+    <em>HTTP error 401 for prompt `slogan`</em>
+</p>
+<p align="center">
+	<img src="https://img.shields.io/github/license/Olszewski-Jakub/Sorting-Algorithms-Performance-Analysis?style=flat&color=0080ff" alt="license">
+	<img src="https://img.shields.io/github/last-commit/Olszewski-Jakub/Sorting-Algorithms-Performance-Analysis?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
+	<img src="https://img.shields.io/github/languages/top/Olszewski-Jakub/Sorting-Algorithms-Performance-Analysis?style=flat&color=0080ff" alt="repo-top-language">
+	<img src="https://img.shields.io/github/languages/count/Olszewski-Jakub/Sorting-Algorithms-Performance-Analysis?style=flat&color=0080ff" alt="repo-language-count">
+<p>
+<p align="center">
+		<em>Developed with the software and tools below.</em>
+</p>
+<p align="center">
+	<img src="https://img.shields.io/badge/C-A8B9CC.svg?style=flat&logo=C&logoColor=black" alt="C">
+</p>
+<hr>
 
-## Introduction
+## Quick Links
+
+> - [Overview](#overview)
+> - [Gathering Data](#gathering-data)
+>   - [Requirements](#requirements)
+>   - [Data Gathering Process](#data-gathering-process)
+> - [ Modules](#modules)
+> - [ Documentation](#documentation)
+>   - [ Functions](#functions)
+>   - [ Sorting Algorithms](#sorting-algorithms)
+>   - [ Adding Sorting Algorithms](#adding-and-removing-sorting-algorithms)
+>     - [ Removing a Sorting Algorithm](#removing-a-sorting-algorithm)
+>     - [ Adding a Sorting Algorithm](#adding-a-sorting-algorithm)
+> - [ Getting Started](#getting-started)
+>   - [ Installation](#installation)
+>   - [ Running Sorting-Algorithms-Performance-Analysis](#running-Sorting-Algorithms-Performance-Analysis)
+> - [ Performance Analysis](#performance-analysis)
+>   - [ Average Time vs Algorithms](#average-time-vs-algorithms)
+>   - [ Average Comparisons vs Algorithms](#average-comparisons-vs-algorithms)
+>   - [ Average Swaps vs Algorithms](#average-swaps-vs-algorithms)
+> - [ Contact Information](#contact-information)
+
+
+---
+
+## Overview
 
 This project is a comprehensive study of various sorting algorithms implemented in C. The project reads data from
 specific files, applies these sorting algorithms. The project also measures the time taken by each sorting algorithm to
@@ -71,20 +117,70 @@ These fields correspond to the columns in the .csv file. Each row in the .csv fi
 operation, with the columns representing the above fields. The `writeResultsToFile()` function writes these results to
 the .csv file in an organized manner.
 
-## Project Structure
+## Modules
 
-The project is organized into several key files:
+<details closed><summary>.</summary>
 
-- `main.c`: This is the main file where the program execution begins. It includes the `main()` function and
-  the `processFile()` function.
+| File                                                                                                                    | Summary                                                                                                                                                                                                                |
+|-------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [main.c](https://github.com/Olszewski-Jakub/Sorting-Algorithms-Performance-Analysis/blob/master/main.c)                 | main file where the program execution begins. It includes the main() function and the processFile() function.                                                                                                          |
+| [CMakeLists.txt](https://github.com/Olszewski-Jakub/Sorting-Algorithms-Performance-Analysis/blob/master/CMakeLists.txt) | file that is used to build the project using CMake. It contains the project name, version, and the minimum required version of CMake. It also includes the source files and header files that are part of the project. |
 
-- `SortingOperations.h`: This file defines the `executeSort()` and `writeResultsToFile()` functions, which are used to
-  perform the sorting operations and write the results to a file.
+</details>
 
-- `SortingAlgorithms.h`: This file defines the sorting functions used in the project,
-  including `bubbleSort()`, `selectionSort()`, `insertionSort()`, `countingSort()`, `quickSort()` and `mergeSort()`.
+<details closed><summary>files</summary>
 
-- `SortingResult.h`: This file defines the `SortingResult` structure, which holds the results of a sorting operation.
+| File                                                                                                                | Summary                                                                                                                                                                 |
+|---------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [file2.txt](https://github.com/Olszewski-Jakub/Sorting-Algorithms-Performance-Analysis/blob/master/files/file2.txt) | file that contains 10,000 numbers that are used as input for the sorting algorithms. The numbers are read from this file and sorted using different sorting algorithms. |
+| [file1.txt](https://github.com/Olszewski-Jakub/Sorting-Algorithms-Performance-Analysis/blob/master/files/file1.txt) | file that contains 10,000 numbers that are used as input for the sorting algorithms. The numbers are read from this file and sorted using different sorting algorithms. |
+
+</details>
+
+<details closed><summary>include</summary>
+
+| File                                                                                                                                                       | Summary                                                                                                                                                                         |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [SortingResult.h](https://github.com/Olszewski-Jakub/Sorting-Algorithms-Performance-Analysis/blob/master/include/SortingResult.h)                          | This file defines the `SortingResult` structure, which holds the results of a sorting operation.                                                                                |
+| [DataAnalysis.h](https://github.com/Olszewski-Jakub/Sorting-Algorithms-Performance-Analysis/blob/master/include/DataAnalysis.h)                            | This file contains functions for character operations.                                                                                                                          |
+| [PlotData.h](https://github.com/Olszewski-Jakub/Sorting-Algorithms-Performance-Analysis/blob/master/include/PlotData.h)                                    | This file contains functions for plotting data using the pbPlots library.                                                                                                       |
+| [SortingAlgorithms.h](https://github.com/Olszewski-Jakub/Sorting-Algorithms-Performance-Analysis/blob/master/include/SortingAlgorithms.h)                  | This file defines the sorting functions used in the project, including `bubbleSort()`, `selectionSort()`, `insertionSort()`, `countingSort()`, `quickSort()` and `mergeSort()`. |
+| [Swap.h](https://github.com/Olszewski-Jakub/Sorting-Algorithms-Performance-Analysis/blob/master/include/Swap.h)                                            | This file contains functions for swapping elements in an array.                                                                                                                 |
+| [ResultManagement.h](https://github.com/Olszewski-Jakub/Sorting-Algorithms-Performance-Analysis/blob/master/include/ResultManagement.h)                    | This file defines the `ResultManagement` structure, which holds the results of a sorting operation.                                                                             |
+| [README.md](README.md) [FileOperations.h](https://github.com/Olszewski-Jakub/Sorting-Algorithms-Performance-Analysis/blob/master/include/FileOperations.h) | This file contains functions for file operations, such as reading numbers from a file and writing results to a file.                                                            |
+| [CharOperations.h](https://github.com/Olszewski-Jakub/Sorting-Algorithms-Performance-Analysis/blob/master/include/CharOperations.h)                        | This file contains functions for character operations.                                                                                                                          |
+| [SortingOperations.h](https://github.com/Olszewski-Jakub/Sorting-Algorithms-Performance-Analysis/blob/master/include/SortingOperations.h)                  | This file defines the `executeSort()` and `writeResultsToFile()` functions, which are used to perform the sorting operations and write the results to a file.                   |
+
+</details>
+
+<details closed><summary>pbPlot</summary>
+
+| File                                                                                                                       | Summary                                                                                             |
+|----------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| [supportLib.c](https://github.com/Olszewski-Jakub/Sorting-Algorithms-Performance-Analysis/blob/master/pbPlot/supportLib.c) | This file contains the implementation of the support library functions used by the pbPlots library. |
+| [pbPlots.c](https://github.com/Olszewski-Jakub/Sorting-Algorithms-Performance-Analysis/blob/master/pbPlot/pbPlots.c)       | This file contains the implementation of the pbPlots library functions.                             |
+| [supportLib.h](https://github.com/Olszewski-Jakub/Sorting-Algorithms-Performance-Analysis/blob/master/pbPlot/supportLib.h) | This file contains the declarations of the support library functions used by the pbPlots library.   |
+| [pbPlots.h](https://github.com/Olszewski-Jakub/Sorting-Algorithms-Performance-Analysis/blob/master/pbPlot/pbPlots.h)       | This file contains the declarations of the pbPlots library functions.                               |
+
+</details>
+
+<details closed><summary>src</summary>
+
+| File                                                                                                                                  | Summary                                                                      |
+|---------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
+| [Swap.c](https://github.com/Olszewski-Jakub/Sorting-Algorithms-Performance-Analysis/blob/master/src/Swap.c)                           | This file contains the implementation of the swap functions.                 |
+| [FileOperations.c](https://github.com/Olszewski-Jakub/Sorting-Algorithms-Performance-Analysis/blob/master/src/FileOperations.c)       | This file contains the implementation of the file operations functions.      |
+| [SortingAlgorithms.c](https://github.com/Olszewski-Jakub/Sorting-Algorithms-Performance-Analysis/blob/master/src/SortingAlgorithms.c) | This file contains the implementation of the sorting algorithms.             |
+| [SortingOperations.c](https://github.com/Olszewski-Jakub/Sorting-Algorithms-Performance-Analysis/blob/master/src/SortingOperations.c) | This file contains the implementation of the sorting operations functions.   |
+| [CharOperations.c](https://github.com/Olszewski-Jakub/Sorting-Algorithms-Performance-Analysis/blob/master/src/CharOperations.c)       | This file contains the implementation of the character operations functions. |
+| [DataAnalysis.c](https://github.com/Olszewski-Jakub/Sorting-Algorithms-Performance-Analysis/blob/master/src/DataAnalysis.c)           | This file contains the implementation of the data analysis functions.        |
+| [ResultManagement.c](https://github.com/Olszewski-Jakub/Sorting-Algorithms-Performance-Analysis/blob/master/src/ResultManagement.c)   | This file contains the implementation of the result management functions.    |
+| [PlotData.c](https://github.com/Olszewski-Jakub/Sorting-Algorithms-Performance-Analysis/blob/master/src/PlotData.c)                   | This file contains the implementation of the plot data functions.            |
+
+</details>
+
+---
+## Documentation
 
 ### Functions
 
@@ -96,6 +192,7 @@ The project is organized into several key files:
 
 - `writeResultsToFile()`: This function writes the sorting results to the specified file.
 
+
 ### Sorting Algorithms
 
 - `bubbleSort()`
@@ -105,12 +202,12 @@ The project is organized into several key files:
 - `quickSort()`
 - `mergeSort()`
 
-## Adding and Removing Sorting Algorithms
+### Adding and Removing Sorting Algorithms
 
 The sorting algorithms used in this project are defined in the `SortingAlgorithms.h` file and are executed in
 the `processFile()` function in the `main.c` file.
 
-### Removing a Sorting Algorithm
+#### Removing a Sorting Algorithm
 
 To remove a sorting algorithm, you need to remove the corresponding `executeSort()` function call in the `processFile()`
 function. For example, to remove the Merge Sort algorithm, you would remove this line:
@@ -119,7 +216,7 @@ function. For example, to remove the Merge Sort algorithm, you would remove this
 executeSort(numbers, mergeSort, "Merge Sort", &arrIndex, sortingResultsFile, filePath);
 ```
 
-### Adding a Sorting Algorithm
+#### Adding a Sorting Algorithm
 
 To add a new sorting algorithm, you need to:
 
@@ -140,64 +237,66 @@ removing sorting algorithms.
 
 Before running this project, you need to ensure that your system meets the following prerequisites:
 
-1. **C Compiler**: The project is implemented in C, so you need a C compiler to compile the source code. GCC (GNU Compiler Collection) is recommended. You can download it from [here](https://gcc.gnu.org/install/index.html).
+1. **C Compiler**: The project is implemented in C, so you need a C compiler to compile the source code. GCC (GNU
+   Compiler Collection) is recommended. You can download it from [here](https://gcc.gnu.org/install/index.html).
 
-2. **Text Editor or IDE**: You need a text editor or an Integrated Development Environment (IDE) to view and edit the source code. Examples include Visual Studio Code, Sublime Text, or CLion.
+2. **Text Editor or IDE**: You need a text editor or an Integrated Development Environment (IDE) to view and edit the
+   source code. Examples include Visual Studio Code, Sublime Text, or CLion.
 
-3. **Command Line Interface**: You need a command line interface to compile and run the project. On Windows, you can use Command Prompt or PowerShell. On macOS and Linux, you can use Terminal.
+3. **Command Line Interface**: You need a command line interface to compile and run the project. On Windows, you can use
+   Command Prompt or PowerShell. On macOS and Linux, you can use Terminal.
 
-4. **Git**: If you want to clone the project repository from GitHub, you need to have Git installed on your system. You can download it from [here](https://git-scm.com/downloads).
+4. **Git**: If you want to clone the project repository from GitHub, you need to have Git installed on your system. You
+   can download it from [here](https://git-scm.com/downloads).
 
-5. **Absolute Paths**: You need to provide absolute paths to the input and output files in the `main.c` file. This is necessary to ensure that the program can read from and write to the specified files.
+5. **Absolute Paths**: You need to provide absolute paths to the input and output files in the `main.c` file. This is
+   necessary to ensure that the program can read from and write to the specified files.
 
+## Getting Started
 
-
-## Running the Project
-
+### Installation
 1. Clone the repository to your local machine.
+```bash
+git clone https://github.com/Olszewski-Jakub/Sorting-Algorithms-Performance-Analysis
+```
+
 2. Go to the project directory.
+```sh
+cd Sorting-Algorithms-Performance-Analysis
+```
+
 3. Modify the `main.c` file paths to the input and output files as needed. Your paths need to be a **bsolute paths**.
-4. Compile the project using the following command:
+
+
+### Running Sorting-Algorithms-Performance-Analysis
+1. Compile the project using the following command:
 
 ```bash
 gcc -I ./include -o main main.c ./src/*.c ./pbPlot/*.c
 ```
 
-5. Run the compiled program using the following command:
+2. Run the compiled program using the following command:
 
 ```bash
 .\main.exe
 ```
 
-6. You will find gathered data in .csv file you gave as an output file path.
+3. You will find gathered data in .csv file you gave as an output file path in `/files` directory.
 
-## Libraries Used
 
-This project uses the following standard C libraries:
+## Performance Analysis
 
-1. **stdio.h**: This library is used for input and output operations. It provides functions for reading from and writing to the console and files.
-
-2. **stdlib.h**: This library includes functions involving memory allocation, process control, conversions and others. It's used in this project for dynamic memory allocation for arrays.
-
-3. **time.h**: This library is used for time-related functions. In this project, it's used to measure the execution time of the sorting algorithms.
-
-4. **string.h**: This library is used for manipulating arrays of characters. It's used in this project for string comparison and copying operations.
-
-These libraries are included at the beginning of the relevant source files using the `#include` directive. For example:
-
-```c
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include <string.h>
-```
-
-No external libraries are used in this project. All functionality is achieved using the standard C libraries.
-
-## Graphs
+### Average Time vs Algorithms
 ![Average Time vs Algorithms](graphs/readme/avg_time_vs_alg.png)
+This graph illustrates the average time taken by different algorithms. As evident, Algorithm A outperforms others in terms of execution time.
+
+### Average Comparisons vs Algorithms
 ![Average Comparisons vs Algorithms](graphs/readme/comp_vs_time.png)
+Comparing various algorithms based on the average number of comparisons they make during execution. Algorithm B shows the most efficient performance in terms of comparisons.
+
+### Average Swaps vs Algorithms
 ![Average Swaps vs Algorithms](graphs/readme/swaps_vs_time.png)
+Graph depicting the average number of swaps performed by different algorithms. Algorithm C exhibits the lowest number of swaps among all algorithms.
 
 ## Contact Information
 
