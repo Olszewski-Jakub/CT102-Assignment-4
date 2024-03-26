@@ -2,8 +2,9 @@ name: Build and Extract Main Executable and CSV Files
 
 on:
   push:
-    branches:
-      - main  # Change this to your main branch name
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
 
 jobs:
   build:
