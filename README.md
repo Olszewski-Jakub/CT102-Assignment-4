@@ -5,7 +5,7 @@
     <h1 align="center">SORTING-ALGORITHMS-PERFORMANCE-ANALYSIS</h1>
 </p>
 <p align="center">
-    <em>HTTP error 401 for prompt `slogan`</em>
+    <em>Comprehensive study of various sorting algorithms implemented in C.</em>
 </p>
 <p align="center">
 	<img src="https://img.shields.io/github/license/Olszewski-Jakub/Sorting-Algorithms-Performance-Analysis?style=flat&color=0080ff" alt="license">
