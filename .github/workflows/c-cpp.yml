@@ -27,8 +27,9 @@ jobs:
 
       - name: Extract All Files from ./files/result
         run: |
-          mkdir -p artifacts/result
-          docker exec my_container sh -c 'cd /app/files/result && cp -r * /artifacts/result'
+          cd artifacts
+          mkdir -p result
+          docker cp $(docker ps -lq):/app/files/result ./artifacts/result
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v2
