@@ -6,10 +6,10 @@
 
 
 #define file1 "../files/dataset/file1.txt"
-#define file2 "C://Users//jolsz//uni//freshman//CT102 - Algorithms & Information Systems//assignmnets//Assignment_4//Sorting_Algorithms_Performance_Analysis//files//file2.txt"
+#define file2 "../files/dataset/file2.txt"
 
 #define result_file_1 "../files/result/result_file1.csv"
-#define result_file_2 "C://Users//jolsz//uni//freshman//CT102 - Algorithms & Information Systems//assignmnets//Assignment_4//Sorting_Algorithms_Performance_Analysis//files//result_file2.csv"
+#define result_file_2 "../files/result/result_file2.csv"
 
 #define GRAPH_PATH "../graphs"
 
@@ -34,7 +34,7 @@ void executeSortingAlgorithms(int *numbers, int *arrIndex, SortingResult *sortin
 int main() {
     int fileExecutionCount = 0;
     processFile(file1, result_file_1, &fileExecutionCount);
-//    processFile(file2, result_file_2, &fileExecutionCount);
+    processFile(file2, result_file_2, &fileExecutionCount);
     return 0;
 }
 
