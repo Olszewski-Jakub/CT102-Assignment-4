@@ -13,7 +13,7 @@
 
 #define GRAPH_PATH "../graphs"
 
-#define NUM_SORTING_ALGORITHMS 6
+#define NUM_SORTING_ALGORITHMS 2
 #define NUM_RESULTS_PER_ALGORITHM 10
 
 
@@ -34,7 +34,7 @@ void executeSortingAlgorithms(int *numbers, int *arrIndex, SortingResult *sortin
 int main() {
     int fileExecutionCount = 0;
     processFile(file1, result_file_1, &fileExecutionCount);
-    processFile(file2, result_file_2, &fileExecutionCount);
+//    processFile(file2, result_file_2, &fileExecutionCount);
     return 0;
 }
 
@@ -117,10 +117,10 @@ void plotData(SortingResult sortingResults[], int size, int numSortingAlgorithms
 }
 
 void executeSortingAlgorithms(int *numbers, int *arrIndex, SortingResult *sortingResultsFile, const char *filePath) {
-    executeSort(numbers, bubbleSort, "Bubble Sort", arrIndex, sortingResultsFile, filePath);
-    executeSort(numbers, selectionSort, "Selection Sort", arrIndex, sortingResultsFile, filePath);
-    executeSort(numbers, insertionSort, "Insertion Sort", arrIndex, sortingResultsFile, filePath);
-    executeSort(numbers, countingSort, "Count Sort", arrIndex, sortingResultsFile, filePath);
+//    executeSort(numbers, bubbleSort, "Bubble Sort", arrIndex, sortingResultsFile, filePath);
+//    executeSort(numbers, selectionSort, "Selection Sort", arrIndex, sortingResultsFile, filePath);
+//    executeSort(numbers, insertionSort, "Insertion Sort", arrIndex, sortingResultsFile, filePath);
+//    executeSort(numbers, countingSort, "Count Sort", arrIndex, sortingResultsFile, filePath);
     executeSort(numbers, mergeSort, "Merge Sort", arrIndex, sortingResultsFile, filePath);
     executeSort(numbers, quickSort, "Quick Sort", arrIndex, sortingResultsFile, filePath);
 }
