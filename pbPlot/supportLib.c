@@ -1,5 +1,5 @@
 #include "supportLib.h"
-
+#include <string.h>
 unsigned char *DoubleArrayToByteArray(double *data, size_t length) {
     unsigned char *out;
     size_t i;
@@ -18,10 +18,21 @@ void WriteToFile(double *data, size_t dataLength, char *filename) {
 
     bytes = DoubleArrayToByteArray(data, dataLength);
 
-    FILE *file = fopen(filename, "wb");
+    FILE *file;
+    while ((file = fopen(filename, "wb")) == NULL) {
+        // If the file path is not empty, remove the first character and try again
+        if (strlen(filename) > 1) {
+            memmove(filename, filename + 1, strlen(filename));
+        } else {
+            // If the file path is empty, return
+            printf("Error opening file\n");
+
+            free(bytes);
+            return;
+        }
+    }
     fwrite(bytes, 1, dataLength, file);
     fclose(file);
-
     free(bytes);
 }
 
