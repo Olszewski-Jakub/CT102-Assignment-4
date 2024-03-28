@@ -18,7 +18,7 @@
  * @param sortingResultsFile An array of SortingResult structures to store the results.
  * @param filePath The path of the file where the results will be written.
  */
-void executeSort(int numbers[],void (*sort)(int[], int, int *, int *, int *), char *algorithmName, int *arrIndex,
+void executeSort(void (*sort)(int[], int, int *, int *, int *), char *algorithmName, int *arrIndex,
                  SortingResult sortingResultsFile[], const char *filePath);
 
 /**

@@ -10,11 +10,12 @@ int isSorted(int arr[], int n) {
     return 1;
 }
 
-void executeSort(int numbers[],void (*sort)(int[], int, int *, int *, int *), char *algorithmName, int *arrIndex,
+void executeSort(void (*sort)(int[], int, int *, int *, int *), char *algorithmName, int *arrIndex,
                  SortingResult sortingResultsFile[], const char *filePath) {
     for (int i = 0; i < 10; i++) { // Loop over the array 10 times
         int size = (i + 1) * 1000; // Calculate the size of the array for each iteration
-        int num_read = readNumbersFromFile(filePath, size, numbers); // Read numbers from the file
+        int *numArr = malloc(size * sizeof(int)); // Allocate memory for the array
+        int num_read = readNumbersFromFile(filePath, size, numArr); // Read numbers from the file
 
         if (num_read == -1) { // If there was an error reading the file
             printf("Error reading file\n"); // Print an error message
@@ -30,15 +31,16 @@ void executeSort(int numbers[],void (*sort)(int[], int, int *, int *, int *), ch
 
         clock_t start_time = clock();
 
-        sort(numbers, size, &swaps, &comparisons,&functionCalls); // Sort the numbers
+        sort(numArr, size, &swaps, &comparisons,&functionCalls); // Sort the numbers
 
         clock_t end_time = clock(); // End time
         double time_taken = ((double) (end_time - start_time)) / CLOCKS_PER_SEC; // Time taken in seconds
 
         saveResultInStruct(size, swaps, comparisons,functionCalls, time_taken, algorithmName, arrIndex, sortingResultsFile);
 
-        if (!isSorted(numbers, size)) { // If the numbers are not sorted
+        if (!isSorted(numArr, size)) { // If the numbers are not sorted
             printf("Array not sorted\n"); // Print a message indicating that the array is not sorted
         }
+        free(numArr); // Free the memory allocated for the array
     }
 }

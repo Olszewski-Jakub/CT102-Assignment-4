@@ -16,9 +16,6 @@
 #define NUM_SORTING_ALGORITHMS 6
 #define NUM_RESULTS_PER_ALGORITHM 10
 
-
-int numbers[10000];
-
 /**
  * Process the file and save the results in a file
  * @param filePath
@@ -29,7 +26,7 @@ void processFile(const char *filePath, const char *resultFilePath, int *fileExec
 void plotData(SortingResult sortingResults[], int size, int numSortingAlgorithms, int resultPerAlgorithm, int *fileExecutionCount);
 
 
-void executeSortingAlgorithms(int *numbers, int *arrIndex, SortingResult *sortingResultsFile, const char *filePath);
+void executeSortingAlgorithms( int *arrIndex, SortingResult *sortingResultsFile, const char *filePath);
 
 int main() {
     int fileExecutionCount = 0;
@@ -46,7 +43,7 @@ void processFile(const char *filePath, const char *resultFilePath, int *fileExec
     SortingResult sortingResultsFile[NUM_SORTING_ALGORITHMS * NUM_RESULTS_PER_ALGORITHM];
 
     // Pass the address of arrIndex and sortingResultsFile to the function
-    executeSortingAlgorithms(numbers, &arrIndex, sortingResultsFile, filePath);
+    executeSortingAlgorithms( &arrIndex, sortingResultsFile, filePath);
     printResults(&arrIndex, sortingResultsFile);
     writeResultsToFile(sortingResultsFile, NUM_SORTING_ALGORITHMS * 10, resultFilePath);
     if (!writeResultsToFile(sortingResultsFile, arrSize, resultFilePath)) {
@@ -116,11 +113,11 @@ void plotData(SortingResult sortingResults[], int size, int numSortingAlgorithms
                              "Time taken (ms)", "Swaps (Millions)");
 }
 
-void executeSortingAlgorithms(int *numbers, int *arrIndex, SortingResult *sortingResultsFile, const char *filePath) {
-    executeSort(numbers, bubbleSort, "Bubble Sort", arrIndex, sortingResultsFile, filePath);
-    executeSort(numbers, selectionSort, "Selection Sort", arrIndex, sortingResultsFile, filePath);
-    executeSort(numbers, insertionSort, "Insertion Sort", arrIndex, sortingResultsFile, filePath);
-    executeSort(numbers, countingSort, "Count Sort", arrIndex, sortingResultsFile, filePath);
-    executeSort(numbers, mergeSort, "Merge Sort", arrIndex, sortingResultsFile, filePath);
-    executeSort(numbers, quickSort, "Quick Sort", arrIndex, sortingResultsFile, filePath);
+void executeSortingAlgorithms( int *arrIndex, SortingResult *sortingResultsFile, const char *filePath) {
+    executeSort( bubbleSort, "Bubble Sort", arrIndex, sortingResultsFile, filePath);
+    executeSort( selectionSort, "Selection Sort", arrIndex, sortingResultsFile, filePath);
+    executeSort( insertionSort, "Insertion Sort", arrIndex, sortingResultsFile, filePath);
+    executeSort( countingSort, "Count Sort", arrIndex, sortingResultsFile, filePath);
+    executeSort( mergeSort, "Merge Sort", arrIndex, sortingResultsFile, filePath);
+    executeSort( quickSort, "Quick Sort", arrIndex, sortingResultsFile, filePath);
 }
